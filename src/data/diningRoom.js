@@ -3,66 +3,70 @@ export const diningRoomData = {
     eyebrow: "Dining Room Collection",
     title: "Gather Around Timeless Design",
     description: "Celebrate the art of shared moments. Our luxury dining collection merges functional beauty with premium craftsmanship to create spaces worthy of your most meaningful gatherings.",
-    image: "/images/gallery/gallery-4.png" // Dining room image
+    image: "/images/categories/dr-hero.png"
   },
   furnitureCategories: [
     {
       id: "cat-dining-tables",
       name: "Dining Tables",
       description: "Generous surfaces crafted from solid wood and natural stone.",
-      image: "/images/gallery/gallery-3.png",
+      price: "Starting at $1,899",
+      image: "/images/categories/dr-table.png",
       href: "/categories/dining-room/tables"
     },
     {
       id: "cat-dining-chairs",
       name: "Dining Chairs",
       description: "Ergonomic comfort wrapped in premium upholstery and leather.",
-      image: "/images/gallery/gallery-8.png",
+      price: "Starting at $499",
+      image: "/images/categories/dr-chair.png",
       href: "/categories/dining-room/chairs"
     },
     {
       id: "cat-sideboards",
       name: "Sideboards & Buffets",
       description: "Elegant storage solutions for effortless entertaining.",
-      image: "/images/gallery/gallery-1.png",
+      price: "Starting at $1,499",
+      image: "/images/categories/dr-sideboard.png",
       href: "/categories/dining-room/sideboards"
     },
     {
       id: "cat-bar-cabinets",
       name: "Bar & Display Cabinets",
       description: "Architectural showcases for your finest glassware.",
-      image: "/images/gallery/gallery-5.png",
+      price: "Starting at $2,199",
+      image: "/images/categories/dr-cabinet.png",
       href: "/categories/dining-room/cabinets"
     }
   ],
   inspirationGallery: [
-    { id: "insp-1", image: "/images/gallery/gallery-6.png", span: "col-span-12 md:col-span-8 row-span-2" },
-    { id: "insp-2", image: "/images/gallery/gallery-2.png", span: "col-span-12 md:col-span-4 row-span-1" },
-    { id: "insp-3", image: "/images/gallery/gallery-7.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-1", title: "Minimalist Oak Dining", price: "Starting at $2,499", image: "/images/categories/dr-insp-1.png", span: "col-span-12 md:col-span-8 row-span-2" },
+    { id: "insp-2", title: "Travertine Stone Setup", price: "Starting at $3,299", image: "/images/categories/dr-insp-2.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-3", title: "Architectural Bar", price: "Starting at $2,199", image: "/images/categories/dr-cabinet.png", span: "col-span-12 md:col-span-4 row-span-1" },
   ],
   designPhilosophy: {
     title: "The Heart of the Home",
     description: "The dining room is more than a place to eat; it is the stage for connection, conversation, and celebration. We approach dining design with a reverence for social geometry—ensuring tables invite intimacy, chairs offer hours of comfort, and storage beautifully supports the flow of entertaining.",
-    image: "/images/gallery/gallery-4.png"
+    image: "/images/categories/dr-hero.png"
   },
   materials: [
     {
       id: "mat-1",
       name: "Italian Travertine",
       description: "Earthy, organic stone with a porous texture that adds warmth and profound character.",
-      image: "/images/materials/italian-marble.png" // Reusing marble/stone
+      image: "/images/materials/italian-marble-v2.png" 
     },
     {
       id: "mat-2",
       name: "Solid Oak",
       description: "Exceptionally durable and finished to highlight its beautiful natural grain structure.",
-      image: "/images/materials/solid-oak.png"
+      image: "/images/materials/solid-oak-v2.png"
     },
     {
       id: "mat-3",
       name: "Full-Grain Leather",
       description: "Buttery soft seating that develops a rich, personalized patina over years of use.",
-      image: "/images/materials/full-grain-leather.png" 
+      image: "/images/materials/full-grain-leather-v2.png" 
     }
   ],
   featuredCollection: {
@@ -76,7 +80,7 @@ export const diningRoomData = {
     name: "The Harrison Family",
     location: "London, UK",
     homeType: "Victorian Terrace",
-    image: "/images/gallery/gallery-8.png"
+    image: "/images/categories/dr-table.png"
   },
   faqs: [
     {
