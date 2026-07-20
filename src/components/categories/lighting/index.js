@@ -1,0 +1,9 @@
+export { LightingHero } from "./LightingHero";
+export { LightingCollections } from "./LightingCollections";
+export { LightingGallery } from "./LightingGallery";
+export { LightingPhilosophy } from "./LightingPhilosophy";
+export { LightingMaterials } from "./LightingMaterials";
+export { LightingCollection } from "./LightingCollection";
+export { LightingStory } from "./LightingStory";
+export { LightingFAQ } from "./LightingFAQ";
+export { LightingCTA } from "./LightingCTA";

@@ -21,11 +21,11 @@ export function FeaturedMaterial({ material }) {
           priority
         />
         {/* Soft luxury gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1516] via-[rgba(26,21,22,0.4)] to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1516] via-[rgba(26,21,22,0.6)] to-[rgba(26,21,22,0.2)] opacity-100" />
       </div>
 
       {/* Origin Badge */}
-      <div className="absolute top-6 left-6 z-10 flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-sm border border-white/20">
+      <div className="absolute top-6 left-6 z-10 flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-sm border border-white/10">
         <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-secondary)] animate-pulse" />
         <span className="font-ui text-xs uppercase tracking-wider text-white font-medium">
           Source: {material.origin}
@@ -54,7 +54,7 @@ export function FeaturedMaterial({ material }) {
             {material.description}
           </p>
           
-          <span className="inline-flex items-center gap-3 font-body text-sm font-semibold tracking-[0.1em] uppercase text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full transition-all duration-300">
+          <span className="inline-flex items-center gap-3 font-body text-sm font-semibold tracking-[0.1em] uppercase text-white bg-black/40 hover:bg-black/60 border border-white/20 backdrop-blur-sm px-6 py-3 rounded-full transition-all duration-300">
             Discover {material.name} 
             <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
           </span>

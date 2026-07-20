@@ -43,7 +43,7 @@ export const featuredCategories = [
     id: "06",
     title: "Lighting",
     description: "Designer pendant lights to illuminate your home.",
-    image: "/images/categories/lighting.png",
+    image: "/images/categories/lighting-v2.png",
     href: "/categories/lighting",
     size: "medium",
   },

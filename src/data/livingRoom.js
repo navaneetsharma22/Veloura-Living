@@ -3,72 +3,72 @@ export const livingRoomData = {
     eyebrow: "Living Room Collection",
     title: "Timeless Comfort for Modern Living",
     description: "Discover a curated selection of luxury sofas, elegant coffee tables, and architectural accent chairs designed to anchor your space with enduring style and uncompromising comfort.",
-    image: "/images/gallery/gallery-3.png" // Using a massive living room image
+    image: "/images/living-room/lr-hero.png"
   },
   furnitureCategories: [
     {
       id: "cat-sofas",
       name: "Luxury Sofas",
       description: "Generous proportions and premium upholstery.",
-      image: "/images/gallery/gallery-1.png",
+      image: "/images/living-room/lr-sofa.png",
       href: "/categories/living-room/sofas"
     },
     {
       id: "cat-chairs",
       name: "Accent Chairs",
       description: "Sculptural forms that command attention.",
-      image: "/images/gallery/gallery-2.png",
+      image: "/images/living-room/lr-chair.png",
       href: "/categories/living-room/accent-chairs"
     },
     {
       id: "cat-coffee-tables",
       name: "Coffee Tables",
       description: "Solid wood and natural stone centerpieces.",
-      image: "/images/gallery/gallery-4.png",
+      image: "/images/living-room/lr-table.png",
       href: "/categories/living-room/coffee-tables"
     },
     {
       id: "cat-storage",
       name: "Media Consoles & Storage",
       description: "Architectural solutions for modern living.",
-      image: "/images/gallery/gallery-5.png",
+      image: "/images/living-room/lr-storage.png",
       href: "/categories/living-room/storage"
     }
   ],
   inspirationGallery: [
-    { id: "insp-1", image: "/images/gallery/gallery-6.png", span: "col-span-12 md:col-span-8 row-span-2" },
-    { id: "insp-2", image: "/images/gallery/gallery-7.png", span: "col-span-12 md:col-span-4 row-span-1" },
-    { id: "insp-3", image: "/images/gallery/gallery-8.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-1", image: "/images/living-room/lr-japandi.png", span: "col-span-12 md:col-span-8 row-span-2" },
+    { id: "insp-2", image: "/images/living-room/lr-chair.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-3", image: "/images/living-room/lr-table.png", span: "col-span-12 md:col-span-4 row-span-1" },
   ],
   designPhilosophy: {
     title: "The Art of the Living Space",
     description: "We believe the living room is the sanctuary of the home. It is where life unfolds, where conversations linger, and where quiet moments are savored. Our approach to design strips away the unnecessary, focusing entirely on the purity of form, the warmth of natural materials, and the ergonomics of true comfort.",
-    image: "/images/gallery/gallery-2.png"
+    image: "/images/living-room/lr-sofa.png"
   },
   materials: [
     {
       id: "mat-1",
       name: "Italian Bouclé",
       description: "Highly textural, impossibly soft, and incredibly durable for everyday luxury.",
-      image: "/images/materials/boucle-fabric.png"
+      image: "/images/materials/boucle-fabric-v2.png"
     },
     {
       id: "mat-2",
       name: "Natural Walnut",
       description: "Rich, deep tones with a complex architectural grain structure.",
-      image: "/images/materials/natural-walnut.png"
+      image: "/images/materials/natural-walnut-v2.png"
     },
     {
       id: "mat-3",
       name: "Calacatta Marble",
       description: "Sourced from Italy, featuring striking, organic veining.",
-      image: "/images/materials/italian-marble.png"
+      image: "/images/materials/italian-marble-v2.png"
     }
   ],
   featuredCollection: {
     eyebrow: "The Japandi Series",
     title: "Where Scandinavian Function Meets Japanese Minimalism",
-    image: "/images/gallery/gallery-7.png",
+    image: "/images/living-room/lr-japandi.png",
     href: "/collections/japandi"
   },
   customerStory: {
@@ -76,7 +76,7 @@ export const livingRoomData = {
     name: "Sarah & James",
     location: "New York, US",
     homeType: "Brownstone",
-    image: "/images/gallery/gallery-8.png"
+    image: "/images/living-room/lr-hero.png"
   },
   faqs: [
     {

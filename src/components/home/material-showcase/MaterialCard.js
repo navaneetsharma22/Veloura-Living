@@ -20,11 +20,11 @@ export function MaterialCard({ material }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {/* Dark gradient overlay that deepens on hover to make text readable */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(20,15,17,0.85)] via-[rgba(20,15,17,0.3)] to-transparent opacity-80 transition-opacity duration-700 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(20,15,17,0.95)] via-[rgba(20,15,17,0.5)] to-[rgba(20,15,17,0.15)] opacity-100 transition-opacity duration-700 group-hover:opacity-100" />
       </div>
 
       {/* Origin Label (Top Right) */}
-      <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-sm border border-white/20">
+      <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 bg-black/30 backdrop-blur-md px-2.5 py-1 rounded-sm border border-white/10">
         <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-secondary)]" />
         <span className="font-ui text-[10px] uppercase tracking-wider text-white font-medium">
           {material.origin}
