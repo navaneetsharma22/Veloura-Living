@@ -1,0 +1,38 @@
+export const newArrivals = [
+  {
+    id: "product-01",
+    name: "Aster Lounge Chair",
+    collection: "Modern Collection",
+    material: "Bouclé Fabric",
+    description: "A soft, sculptural seating experience.",
+    image: "/images/products/aster-chair.png",
+    href: "/products/aster-lounge-chair",
+  },
+  {
+    id: "product-02",
+    name: "Luna Coffee Table",
+    collection: "Luxury Collection",
+    material: "Italian Marble",
+    description: "Elegant geometry in premium natural stone.",
+    image: "/images/products/luna-table.png",
+    href: "/products/luna-coffee-table",
+  },
+  {
+    id: "product-03",
+    name: "Nord Dining Table",
+    collection: "Scandinavian Collection",
+    material: "Solid Oak",
+    description: "Minimalist craftsmanship for everyday dining.",
+    image: "/images/products/nord-table.png",
+    href: "/products/nord-dining-table",
+  },
+  {
+    id: "product-04",
+    name: "Aria Sideboard",
+    collection: "Contemporary Collection",
+    material: "Walnut Wood",
+    description: "Sophisticated storage with architectural lines.",
+    image: "/images/products/aria-sideboard.png",
+    href: "/products/aria-sideboard",
+  },
+];

@@ -1,0 +1,208 @@
+/* ═══════════════════════════════════════════════════════════════
+   VELOURA LIVING — Collections CSS (Masonry / Asymmetric)
+   ═══════════════════════════════════════════════════════════════ */
+
+.veloura-collections__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .veloura-collections__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .veloura-collections__grid {
+    /* 3 Column Grid for Masonry */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+  /* Asymmetric spans */
+  .veloura-collection-card[data-size="large"] {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 700px;
+  }
+  
+  .veloura-collection-card[data-size="vertical"] {
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 700px;
+  }
+  
+  .veloura-collection-card[data-size="medium"] {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 334px; /* (700 - 32 gap) / 2 */
+  }
+}
+
+/* ─── Card Base ────────────────────────────────────────────── */
+.veloura-collection-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 400px;
+  border-radius: 16px; /* Larger radius for collections */
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--bg-surface);
+  /* Luxury shadow */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.6s ease;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .veloura-collection-card {
+    height: 450px;
+  }
+}
+
+/* ─── Card Image & Parallax ────────────────────────────────── */
+.veloura-collection-card__img-wrapper {
+  position: absolute;
+  inset: -15px; /* Negative inset gives room for parallax movement without showing edges */
+  z-index: 1;
+  overflow: hidden;
+}
+
+.veloura-collection-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* GSAP will handle the mouse parallax, CSS handles the hover scale */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ─── Card Overlay ─────────────────────────────────────────── */
+.veloura-collection-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(20, 15, 17, 0.85) 0%, /* Dark espresso color from design system */
+    rgba(20, 15, 17, 0.3) 40%,
+    transparent 100%
+  );
+  opacity: 0.8;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+/* ─── Card Content ─────────────────────────────────────────── */
+.veloura-collection-card__content {
+  position: relative;
+  z-index: 3;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .veloura-collection-card__content {
+    padding: 40px;
+  }
+}
+
+.veloura-collection-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.veloura-collection-card__id {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  opacity: 0.7;
+}
+
+.veloura-collection-card__line {
+  height: 1px;
+  width: 40px;
+  background-color: white;
+  opacity: 0.4;
+  transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+.veloura-collection-card__title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 12px;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.veloura-collection-card__desc {
+  font-size: 15px;
+  color: white;
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 0; /* Changed dynamically by CTA reveal */
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), margin-bottom 0.5s ease;
+}
+
+.veloura-collection-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  
+  /* Initial hidden state */
+  position: absolute;
+  bottom: 0;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ─── Hover States ─────────────────────────────────────────── */
+.veloura-collection-card:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+}
+
+.veloura-collection-card:hover .veloura-collection-card__img {
+  transform: scale(1.05);
+}
+
+.veloura-collection-card:hover .veloura-collection-card__overlay {
+  opacity: 1;
+}
+
+.veloura-collection-card:hover .veloura-collection-card__header,
+.veloura-collection-card:hover .veloura-collection-card__title,
+.veloura-collection-card:hover .veloura-collection-card__desc {
+  transform: translateY(-20px);
+}
+
+.veloura-collection-card:hover .veloura-collection-card__line {
+  width: 60px;
+  opacity: 0.8;
+}
+
+.veloura-collection-card:hover .veloura-collection-card__cta {
+  transform: translateY(0);
+  opacity: 1;
+}

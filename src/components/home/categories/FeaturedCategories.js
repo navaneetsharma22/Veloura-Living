@@ -11,6 +11,7 @@ export function FeaturedCategories() {
       spacing="spacious" 
       bg="default" 
       container 
+      containerWidth="wide"
       className="veloura-featured-categories"
       aria-label="Featured Categories"
     >

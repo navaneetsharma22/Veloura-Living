@@ -76,7 +76,7 @@ export const featuredCategories = [
     id: "09",
     title: "Mirrors",
     description: "Elegant statement mirrors to elevate your space.",
-    image: "/images/categories/mirrors.png",
+    image: "/images/categories/mirrors-v2.png",
     href: "/collections/mirrors",
     size: "medium", // Fills the final 4th column of the 3rd row perfectly!
   },
