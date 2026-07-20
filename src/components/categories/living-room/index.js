@@ -1,0 +1,9 @@
+export { LivingHero } from "./LivingHero";
+export { FurnitureShowcase } from "./FurnitureShowcase";
+export { InspirationGallery } from "./InspirationGallery";
+export { DesignPhilosophy } from "./DesignPhilosophy";
+export { MaterialHighlights } from "./MaterialHighlights";
+export { FeaturedCollectionBanner } from "./FeaturedCollectionBanner";
+export { CustomerStory } from "./CustomerStory";
+export { LivingFAQ } from "./LivingFAQ";
+export { LivingCTA } from "./LivingCTA";
