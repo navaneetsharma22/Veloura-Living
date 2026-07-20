@@ -1,0 +1,43 @@
+export const journalArticles = [
+  {
+    id: "journal-01",
+    isFeatured: true,
+    title: "The Art of Designing a Timeless Living Room",
+    category: "Interior Design",
+    date: "October 12, 2026",
+    readTime: "6 min read",
+    author: "Isabella Rossi",
+    excerpt: "Discover the foundational principles of creating a living space that transcends fleeting trends. We explore how to balance statement pieces with quiet architecture, and why investing in organic materials is the secret to enduring elegance.",
+    image: "/images/gallery/gallery-5.png",
+  },
+  {
+    id: "journal-02",
+    isFeatured: false,
+    title: "Choosing the Perfect Wood for Luxury Furniture",
+    category: "Materials",
+    date: "October 05, 2026",
+    readTime: "4 min read",
+    excerpt: "From the warm honey tones of solid oak to the deep, architectural richness of natural walnut. A comprehensive guide to understanding hardwood grains, durability, and how they age in your home.",
+    image: "/images/gallery/gallery-6.png",
+  },
+  {
+    id: "journal-03",
+    isFeatured: false,
+    title: "Japandi Interiors: Simplicity Meets Warmth",
+    category: "Design Trends",
+    date: "September 28, 2026",
+    readTime: "5 min read",
+    excerpt: "Exploring the beautiful intersection of Japanese minimalism and Scandinavian functionality. Learn how to achieve this highly sought-after aesthetic through low-profile furniture and tactile textures.",
+    image: "/images/gallery/gallery-7.png",
+  },
+  {
+    id: "journal-04",
+    isFeatured: false,
+    title: "Creating Elegant Dining Spaces for Modern Homes",
+    category: "Home Styling",
+    date: "September 15, 2026",
+    readTime: "7 min read",
+    excerpt: "The dining room is the heart of hosting. We share expert styling tips on selecting the right table proportions, layering lighting, and choosing seating that encourages long, comfortable conversations.",
+    image: "/images/gallery/gallery-8.png",
+  }
+];

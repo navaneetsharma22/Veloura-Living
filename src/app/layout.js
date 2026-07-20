@@ -4,6 +4,7 @@ import { Providers } from "@/components/providers";
 import { DesktopNavigation, MobileNavigation } from "@/components/layout";
 import { SearchOverlay } from "@/components/search/SearchOverlay";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
           <main id="main-content" className="flex-grow flex flex-col w-full outline-none pt-20 md:pt-24" tabIndex={-1}>
             {children}
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>

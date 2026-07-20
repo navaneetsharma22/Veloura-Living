@@ -4,6 +4,11 @@ import { FeaturedCategories } from "@/components/home/categories";
 import { FeaturedCollections } from "@/components/home/collections";
 import { NewArrivals } from "@/components/home/new-arrivals";
 import { Craftsmanship } from "@/components/home/craftsmanship";
+import { MaterialShowcase } from "@/components/home/material-showcase";
+import { InspirationGallery } from "@/components/home/inspiration-gallery";
+import { CustomerStories } from "@/components/home/customer-stories";
+import { JournalPreview } from "@/components/home/journal";
+import { Newsletter } from "@/components/home/newsletter";
 
 export default function MarketingPage() {
   return (
@@ -13,6 +18,11 @@ export default function MarketingPage() {
       <FeaturedCollections />
       <NewArrivals />
       <Craftsmanship />
+      <MaterialShowcase />
+      <InspirationGallery />
+      <CustomerStories />
+      <JournalPreview />
+      <Newsletter />
     </PageTransition>
   );
 }

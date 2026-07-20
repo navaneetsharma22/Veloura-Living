@@ -6,7 +6,7 @@ export function CraftGallery() {
   return (
     <div className="relative w-full h-full min-h-[500px] lg:min-h-[700px] rounded-2xl overflow-hidden group reveal-craft-image">
       <Image
-        src="/images/craftsmanship/artisan-hero.png"
+        src="/images/gallery/gallery-5.png"
         alt="Artisan shaping solid wood in the Veloura Living workshop"
         fill
         className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
