@@ -1,0 +1,9 @@
+export { StorageHero } from "./StorageHero";
+export { StorageCollections } from "./StorageCollections";
+export { StorageGallery } from "./StorageGallery";
+export { StoragePhilosophy } from "./StoragePhilosophy";
+export { StorageMaterials } from "./StorageMaterials";
+export { StorageCollection } from "./StorageCollection";
+export { StorageStory } from "./StorageStory";
+export { StorageFAQ } from "./StorageFAQ";
+export { StorageCTA } from "./StorageCTA";

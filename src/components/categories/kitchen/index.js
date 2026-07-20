@@ -1,0 +1,9 @@
+export { KitchenHero } from "./KitchenHero";
+export { KitchenFurniture } from "./KitchenFurniture";
+export { KitchenGallery } from "./KitchenGallery";
+export { KitchenPhilosophy } from "./KitchenPhilosophy";
+export { KitchenMaterials } from "./KitchenMaterials";
+export { KitchenCollection } from "./KitchenCollection";
+export { KitchenStory } from "./KitchenStory";
+export { KitchenFAQ } from "./KitchenFAQ";
+export { KitchenCTA } from "./KitchenCTA";

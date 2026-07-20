@@ -1,0 +1,9 @@
+export { DecorHero } from "./DecorHero";
+export { DecorCollections } from "./DecorCollections";
+export { DecorGallery } from "./DecorGallery";
+export { DecorPhilosophy } from "./DecorPhilosophy";
+export { DecorMaterials } from "./DecorMaterials";
+export { DecorCollection } from "./DecorCollection";
+export { DecorStory } from "./DecorStory";
+export { DecorFAQ } from "./DecorFAQ";
+export { DecorCTA } from "./DecorCTA";
