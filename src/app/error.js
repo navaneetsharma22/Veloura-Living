@@ -18,7 +18,7 @@ export default function GlobalError({ error, reset }) {
       </div>
       <h1 className="text-display-sm font-heading mb-4">Something went wrong</h1>
       <p className="text-body-lg text-muted max-w-md mx-auto mb-8">
-        We apologize for the inconvenience. Our technical team has been notified.
+        {error.message || "We apologize for the inconvenience. Our technical team has been notified."}
       </p>
       <div className="flex gap-4">
         <Button onClick={() => reset()} variant="primary" size="lg">
