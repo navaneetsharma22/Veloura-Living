@@ -1,0 +1,9 @@
+export { AboutHero } from "./AboutHero";
+export { BrandStory } from "./BrandStory";
+export { Philosophy } from "./Philosophy";
+export { Craftsmanship } from "./Craftsmanship";
+export { Sustainability } from "./Sustainability";
+export { Team } from "./Team";
+export { Showroom } from "./Showroom";
+export { BrandStats } from "./BrandStats";
+export { CTA } from "./CTA";
