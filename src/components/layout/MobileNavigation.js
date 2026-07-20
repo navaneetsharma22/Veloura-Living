@@ -164,7 +164,11 @@ export function MobileNavigation() {
               >
                 <IconWrapper icon={Search} size="sm" />
               </button>
-              <button className="p-2 text-heading focus-ring rounded-radius-sm outline-none relative" aria-label="Cart">
+              <button 
+                onClick={() => window.dispatchEvent(new Event("open-cart"))}
+                className="p-2 text-heading focus-ring rounded-radius-sm outline-none relative" 
+                aria-label="Cart"
+              >
                 <IconWrapper icon={ShoppingBag} size="sm" />
                 <span className="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-medium text-surface">
                   0

@@ -149,6 +149,7 @@ export function DesktopNavigation() {
               <IconWrapper icon={User} size="md" className="group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" />
             </Link>
             <button
+              onClick={() => window.dispatchEvent(new Event("open-cart"))}
               className="text-heading hover:text-primary transition-colors focus-ring rounded-radius-sm p-1 outline-none group relative"
               aria-label="Cart"
             >

@@ -1,3 +1,10 @@
+import { PageTransition } from "@/components/layout/PageTransition";
+import { HeroLayout } from "@/components/hero";
+
 export default function MarketingPage() {
-  return <div>MarketingPage</div>;
+  return (
+    <PageTransition>
+      <HeroLayout />
+    </PageTransition>
+  );
 }
