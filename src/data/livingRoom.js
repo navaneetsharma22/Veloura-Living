@@ -24,21 +24,21 @@ export const livingRoomData = {
       id: "cat-coffee-tables",
       name: "Coffee Tables",
       description: "Solid wood and natural stone centerpieces.",
-      image: "/images/living-room/lr-table.png",
+      image: "/images/living-room/lr-japandi.png",
       href: "/categories/living-room/coffee-tables"
     },
     {
       id: "cat-storage",
       name: "Media Consoles & Storage",
       description: "Architectural solutions for modern living.",
-      image: "/images/living-room/lr-storage.png",
+      image: "/images/living-room/lr-hero.png",
       href: "/categories/living-room/storage"
     }
   ],
   inspirationGallery: [
     { id: "insp-1", image: "/images/living-room/lr-japandi.png", span: "col-span-12 md:col-span-8 row-span-2" },
     { id: "insp-2", image: "/images/living-room/lr-chair.png", span: "col-span-12 md:col-span-4 row-span-1" },
-    { id: "insp-3", image: "/images/living-room/lr-table.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-3", image: "/images/living-room/lr-sofa.png", span: "col-span-12 md:col-span-4 row-span-1" },
   ],
   designPhilosophy: {
     title: "The Art of the Living Space",
