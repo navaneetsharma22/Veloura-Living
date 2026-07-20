@@ -2,6 +2,7 @@ import { Inter, Cormorant_Garamond, Geist } from "next/font/google";
 import { constructMetadata } from "@/lib/metadata";
 import { Providers } from "@/components/providers";
 import { DesktopNavigation, MobileNavigation } from "@/components/layout";
+import { SearchOverlay } from "@/components/search/SearchOverlay";
 import "./globals.css";
 
 const inter = Inter({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           Skip to main content
         </a>
         <Providers>
+          <SearchOverlay />
           <DesktopNavigation />
           <MobileNavigation />
           <main id="main-content" className="flex-grow flex flex-col w-full outline-none pt-20 md:pt-24" tabIndex={-1}>

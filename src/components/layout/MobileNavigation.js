@@ -157,7 +157,11 @@ export function MobileNavigation() {
 
             {/* Actions */}
             <div className="flex items-center space-x-4">
-              <button className="p-2 text-heading focus-ring rounded-radius-sm outline-none" aria-label="Search">
+              <button 
+                onClick={() => window.dispatchEvent(new Event("open-search"))}
+                className="p-2 text-heading focus-ring rounded-radius-sm outline-none" 
+                aria-label="Search"
+              >
                 <IconWrapper icon={Search} size="sm" />
               </button>
               <button className="p-2 text-heading focus-ring rounded-radius-sm outline-none relative" aria-label="Cart">
