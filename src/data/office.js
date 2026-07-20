@@ -3,7 +3,7 @@ export const officeData = {
     eyebrow: "Office Collection",
     title: "Work Beautifully. Create Effortlessly.",
     description: "Discover a collection of luxury workspace furniture designed to inspire focus and elevate productivity through timeless aesthetics and uncompromising craftsmanship.",
-    image: "/images/categories/office.png" // Reusing available office image
+    image: "/images/categories/of-hero.png" 
   },
   furnitureCategories: [
     {
@@ -11,7 +11,7 @@ export const officeData = {
       name: "Executive Desks",
       description: "Commanding architectural forms crafted from premium hardwoods.",
       price: "Starting at $2,499",
-      image: "/images/gallery/gallery-2.png",
+      image: "/images/categories/of-desk.png",
       href: "/categories/office/desks"
     },
     {
@@ -19,7 +19,7 @@ export const officeData = {
       name: "Office Chairs",
       description: "Ergonomic excellence wrapped in luxurious Italian leather.",
       price: "Starting at $899",
-      image: "/images/gallery/gallery-8.png",
+      image: "/images/categories/of-chair.png",
       href: "/categories/office/chairs"
     },
     {
@@ -27,52 +27,52 @@ export const officeData = {
       name: "Bookshelves & Storage",
       description: "Elegant modular systems to display your library and organize essentials.",
       price: "Starting at $1,899",
-      image: "/images/gallery/gallery-1.png",
+      image: "/images/categories/of-storage.png",
       href: "/categories/office/storage"
     },
     {
       id: "cat-meeting-tables",
       name: "Meeting Tables",
       description: "Spacious, collaborative surfaces designed for executive environments.",
-      price: "Starting at $3,499",
-      image: "/images/gallery/gallery-3.png",
+      price: "Starting at $3,199",
+      image: "/images/categories/of-meeting.png",
       href: "/categories/office/meeting"
     }
   ],
   inspirationGallery: [
-    { id: "insp-1", title: "Executive Suite", price: "Starting at $3,999", image: "/images/gallery/gallery-7.png", span: "col-span-12 md:col-span-8 row-span-2" },
-    { id: "insp-2", title: "Creative Workspace", price: "Starting at $2,199", image: "/images/gallery/gallery-6.png", span: "col-span-12 md:col-span-4 row-span-1" },
-    { id: "insp-3", title: "Minimalist Library", price: "Starting at $1,899", image: "/images/gallery/gallery-4.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-1", title: "The Apex Executive Office", price: "Starting at $4,999", image: "/images/categories/of-insp-1.png", span: "col-span-12 md:col-span-8 row-span-2" },
+    { id: "insp-2", title: "Minimalist Workspace", price: "Starting at $2,199", image: "/images/categories/of-insp-2.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-3", title: "Collaborative Meeting Area", price: "Starting at $3,599", image: "/images/categories/of-insp-3.png", span: "col-span-12 md:col-span-4 row-span-1" },
   ],
   designPhilosophy: {
     title: "The Architecture of Productivity",
     description: "A well-designed workspace is the foundation of clear thought. We believe that an office should never feel sterile; instead, it should be a sanctuary of focus. By merging rigorous ergonomic engineering with the warmth of natural materials, we create environments that sustain deep work and inspire creativity.",
-    image: "/images/gallery/gallery-5.png"
+    image: "/images/categories/of-hero.png"
   },
   materials: [
     {
       id: "mat-1",
       name: "Smoked Oak",
       description: "A rich, deeply saturated timber that adds a sense of gravity and sophistication to any workspace.",
-      image: "/images/materials/solid-oak.png" // Reusing timber
+      image: "/images/materials/solid-oak-v2.png" 
     },
     {
       id: "mat-2",
       name: "Italian Leather",
       description: "Supple, breathable, and incredibly durable, providing unmatched comfort during long hours of focus.",
-      image: "/images/materials/full-grain-leather.png"
+      image: "/images/materials/full-grain-leather-v2.png"
     },
     {
       id: "mat-3",
       name: "Powder-Coated Steel",
       description: "Sleek, architectural metal framing that offers structural integrity with a minimalist visual footprint.",
-      image: "/images/materials/italian-marble.png" // Reusing placeholder for now
+      image: "/images/materials/brushed-brass-v2.png" 
     }
   ],
   featuredCollection: {
     eyebrow: "The Apex Series",
     title: "Executive Leadership, Refined.",
-    image: "/images/gallery/gallery-2.png",
+    image: "/images/categories/of-desk.png",
     href: "/collections/modern"
   },
   customerStory: {
@@ -80,7 +80,7 @@ export const officeData = {
     name: "David Chen",
     profession: "Creative Director",
     location: "New York, NY",
-    image: "/images/gallery/gallery-5.png"
+    image: "/images/categories/of-desk.png"
   },
   faqs: [
     {

@@ -3,47 +3,51 @@ export const outdoorData = {
     eyebrow: "Outdoor Collection",
     title: "Luxury Living Beyond Four Walls",
     description: "Discover a collection of timeless outdoor furniture designed to seamlessly extend your living space into nature. Crafted to weather the elements while retaining uncompromising elegance.",
-    image: "/images/gallery/gallery-8.png" // Outdoor/Patio image
+    image: "/images/categories/od-hero.png" 
   },
   furnitureCategories: [
     {
       id: "cat-outdoor-sofas",
       name: "Outdoor Sofas & Sectionals",
       description: "Generous, deep-seated lounging wrapped in performance fabrics.",
-      image: "/images/gallery/gallery-2.png",
+      price: "Starting at $3,499",
+      image: "/images/categories/od-sofa.png",
       href: "/categories/outdoor/sofas"
     },
     {
       id: "cat-lounge-chairs",
       name: "Lounge Chairs & Daybeds",
       description: "Sun-drenched relaxation crafted from premium solid teak.",
-      image: "/images/gallery/gallery-6.png",
+      price: "Starting at $1,299",
+      image: "/images/categories/od-lounge.png",
       href: "/categories/outdoor/lounge"
     },
     {
       id: "cat-outdoor-dining",
       name: "Outdoor Dining Sets",
       description: "Elegant alfresco entertaining built for year-round durability.",
-      image: "/images/gallery/gallery-4.png",
+      price: "Starting at $4,199",
+      image: "/images/categories/od-dining.png",
       href: "/categories/outdoor/dining"
     },
     {
       id: "cat-coffee-tables",
       name: "Coffee Tables & Fire Pits",
       description: "Architectural centerpieces for cool summer evenings.",
-      image: "/images/gallery/gallery-7.png",
+      price: "Starting at $899",
+      image: "/images/categories/od-table.png",
       href: "/categories/outdoor/tables"
     }
   ],
   inspirationGallery: [
-    { id: "insp-1", image: "/images/gallery/gallery-8.png", span: "col-span-12 md:col-span-8 row-span-2" },
-    { id: "insp-2", image: "/images/gallery/gallery-5.png", span: "col-span-12 md:col-span-4 row-span-1" },
-    { id: "insp-3", image: "/images/gallery/gallery-3.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-1", title: "Riviera Terrace", price: "Starting at $6,499", image: "/images/categories/od-insp-1.png", span: "col-span-12 md:col-span-8 row-span-2" },
+    { id: "insp-2", title: "Poolside Lounge", price: "Starting at $3,299", image: "/images/categories/od-insp-2.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-3", title: "Alfresco Dining", price: "Starting at $4,199", image: "/images/categories/od-dining.png", span: "col-span-12 md:col-span-4 row-span-1" },
   ],
   designPhilosophy: {
     title: "Harmony With Nature",
     description: "We believe the boundary between indoors and outdoors should be imperceptible. Our outdoor collections are designed with the exact same rigor, comfort, and sophisticated proportions as our interior lines, ensuring your terrace or garden feels like a natural continuation of your home.",
-    image: "/images/gallery/gallery-6.png"
+    image: "/images/categories/od-hero.png"
   },
   materials: [
     {
@@ -68,7 +72,7 @@ export const outdoorData = {
   featuredCollection: {
     eyebrow: "The Riviera Series",
     title: "Mediterranean Minimalism for the Modern Terrace.",
-    image: "/images/gallery/gallery-7.png",
+    image: "/images/categories/od-lounge.png",
     href: "/collections/contemporary"
   },
   customerStory: {
@@ -76,7 +80,7 @@ export const outdoorData = {
     name: "Elena Rossi",
     profession: "Homeowner",
     location: "Los Angeles, CA",
-    image: "/images/gallery/gallery-8.png"
+    image: "/images/categories/od-sofa.png"
   },
   faqs: [
     {
