@@ -20,7 +20,7 @@ export const featuredCategories = [
     title: "Dining",
     description: "Luxury oak dining tables and settings.",
     image: "/images/categories/dining.png",
-    href: "/categories/dining",
+    href: "/categories/dining-room",
     size: "medium",
   },
   {

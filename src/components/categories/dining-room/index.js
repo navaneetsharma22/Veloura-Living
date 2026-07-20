@@ -1,0 +1,9 @@
+export { DiningHero } from "./DiningHero";
+export { DiningFurniture } from "./DiningFurniture";
+export { DiningGallery } from "./DiningGallery";
+export { DiningPhilosophy } from "./DiningPhilosophy";
+export { DiningMaterials } from "./DiningMaterials";
+export { DiningCollection } from "./DiningCollection";
+export { DiningStory } from "./DiningStory";
+export { DiningFAQ } from "./DiningFAQ";
+export { DiningCTA } from "./DiningCTA";
