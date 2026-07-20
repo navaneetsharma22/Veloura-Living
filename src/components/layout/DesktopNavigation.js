@@ -5,24 +5,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, Heart, ShoppingBag, User } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Container } from "./Container";
 import { Logo } from "@/components/common";
 import { IconWrapper } from "@/components/ui/Icon";
 import { MegaMenu } from "@/components/navigation/MegaMenu";
 
 /**
  * Veloura Living - Desktop Navigation
- * Premium desktop navigation with scroll-sensitive background states and Mega Menu.
  */
 
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Shop", href: "/shop", hasMegaMenu: true },
-  { label: "Collections", href: "/collections", hasMegaMenu: true },
-  { label: "Rooms", href: "/rooms", hasMegaMenu: true },
-  { label: "Journal", href: "/journal" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "HOME", href: "/" },
+  { label: "SHOP", href: "/shop", hasMegaMenu: true },
+  { label: "COLLECTIONS", href: "/collections", hasMegaMenu: true },
+  { label: "ROOMS", href: "/rooms", hasMegaMenu: true },
+  { label: "JOURNAL", href: "/journal" },
+  { label: "ABOUT", href: "/about" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 export function DesktopNavigation() {
@@ -33,18 +31,15 @@ export function DesktopNavigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Transition background after scrolling 50px
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    // Run once on mount to catch initial position
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle route change to close mega menu
   useEffect(() => {
     setActiveMenu(null);
   }, [pathname]);
@@ -58,7 +53,7 @@ export function DesktopNavigation() {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
     hoverTimeout.current = setTimeout(() => {
       setActiveMenu(null);
-    }, 150); // 150ms delay prevents accidental closing when moving to the menu
+    }, 150);
   };
 
   const closeMenu = () => {
@@ -68,29 +63,29 @@ export function DesktopNavigation() {
   return (
     <header
       className={cn(
-        "hidden lg:block fixed top-0 left-0 w-full z-40 transition-colors duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
-        isScrolled || activeMenu ? "bg-surface shadow-sm" : "bg-transparent"
+        "hidden lg:block fixed top-0 left-0 w-full z-40 transition-all duration-200 ease-in-out bg-[var(--bg-warm)] h-[90px]",
+        isScrolled ? "shadow-[0_2px_8px_rgba(43,31,35,0.08)]" : ""
       )}
       onMouseLeave={handleMouseLeave}
     >
-      <Container width="wide">
+      <div className="w-full px-[48px] h-full">
         <nav
-          className="flex items-center justify-between h-20 md:h-24"
+          className="flex items-center justify-between h-full"
           aria-label="Desktop Navigation"
         >
           {/* LEFT: Logo */}
-          <div className="flex-1 flex justify-start">
+          <div className="flex-1 flex justify-start items-center h-full">
             <Link
               href="/"
-              className="focus-ring rounded-radius-sm outline-none transition-opacity hover:opacity-80"
+              className="outline-none transition-opacity hover:opacity-80 flex items-center h-full"
               aria-label="Veloura Living Home"
             >
-              <Logo className="scale-90 md:scale-100 origin-left" />
+              <Logo />
             </Link>
           </div>
 
           {/* CENTER: Links */}
-          <ul className="hidden lg:flex items-center space-x-10 h-full">
+          <ul className="hidden lg:flex items-center justify-center gap-[32px] h-full flex-1">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== "/");
               const isMegaMenuActive = activeMenu === link.label;
@@ -98,24 +93,24 @@ export function DesktopNavigation() {
               return (
                 <li 
                   key={link.label}
-                  className="h-full flex items-center"
+                  className="h-full flex items-center relative"
                   onMouseEnter={() => link.hasMegaMenu ? handleMouseEnter(link.label) : handleMouseEnter(null)}
                 >
                   <Link
                     href={link.href}
                     className={cn(
-                      "text-body-sm tracking-wide uppercase transition-colors duration-300 focus-ring rounded-radius-sm py-2 px-1 outline-none relative group",
-                      isActive || isMegaMenuActive ? "text-primary font-medium" : "text-heading hover:text-primary"
+                      "font-body uppercase text-[13px] font-medium tracking-[1px] transition-colors duration-200 outline-none relative",
+                      isActive || isMegaMenuActive ? "text-[var(--brand-primary)]" : "text-[var(--text-heading)] hover:text-[var(--brand-primary)]"
                     )}
                     aria-current={isActive ? "page" : undefined}
                     aria-expanded={link.hasMegaMenu ? isMegaMenuActive : undefined}
                   >
                     {link.label}
-                    {/* Minimal active/hover indicator */}
+                    {/* 2px underline, 8px below text */}
                     <span
                       className={cn(
-                        "absolute -bottom-1 left-0 w-full h-[1px] bg-primary transition-transform duration-300 origin-left",
-                        isActive || isMegaMenuActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                        "absolute -bottom-[8px] left-0 w-full h-[2px] bg-[var(--brand-primary)] transition-transform duration-200 origin-left",
+                        isActive || isMegaMenuActive ? "scale-x-100" : "scale-x-0"
                       )}
                       aria-hidden="true"
                     />
@@ -126,42 +121,41 @@ export function DesktopNavigation() {
           </ul>
 
           {/* RIGHT: Actions */}
-          <div className="flex-1 flex justify-end items-center space-x-6">
+          <div className="flex-1 flex justify-end items-center gap-[20px]">
             <button
               onClick={() => window.dispatchEvent(new Event("open-search"))}
-              className="text-heading hover:text-primary transition-colors focus-ring rounded-radius-sm p-1 outline-none group"
+              className="text-[var(--text-heading)] transition-opacity duration-200 hover:opacity-60 outline-none"
               aria-label="Search"
             >
-              <IconWrapper icon={Search} size="md" className="group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              <Search size={20} strokeWidth={1.5} />
             </button>
             <Link
               href="/wishlist"
-              className="text-heading hover:text-primary transition-colors focus-ring rounded-radius-sm p-1 outline-none group"
+              className="text-[var(--text-heading)] transition-opacity duration-200 hover:opacity-60 outline-none"
               aria-label="Wishlist"
             >
-              <IconWrapper icon={Heart} size="md" className="group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              <Heart size={20} strokeWidth={1.5} />
             </Link>
             <Link
               href="/account"
-              className="text-heading hover:text-primary transition-colors focus-ring rounded-radius-sm p-1 outline-none group"
+              className="text-[var(--text-heading)] transition-opacity duration-200 hover:opacity-60 outline-none"
               aria-label="Account"
             >
-              <IconWrapper icon={User} size="md" className="group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              <User size={20} strokeWidth={1.5} />
             </Link>
             <button
               onClick={() => window.dispatchEvent(new Event("open-cart"))}
-              className="text-heading hover:text-primary transition-colors focus-ring rounded-radius-sm p-1 outline-none group relative"
+              className="text-[var(--text-heading)] transition-opacity duration-200 hover:opacity-60 outline-none relative"
               aria-label="Cart"
             >
-              <IconWrapper icon={ShoppingBag} size="md" className="group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" />
-              {/* Placeholder for cart count badge later */}
-              <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-medium text-surface">
+              <ShoppingBag size={20} strokeWidth={1.5} />
+              <span className="absolute -top-1 -right-2 flex h-[14px] w-[14px] items-center justify-center rounded-full bg-[var(--brand-accent)] text-white text-[10px] font-medium leading-none">
                 0
               </span>
             </button>
           </div>
         </nav>
-      </Container>
+      </div>
       
       {/* MEGA MENU LAYER */}
       <MegaMenu activeMenu={activeMenu} onClose={closeMenu} />

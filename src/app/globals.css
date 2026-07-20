@@ -1,16 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colors */
-  --color-primary: #B76E79;
-  --color-secondary: #D8A7B1;
-  --color-accent: #8A4F5D;
-  --color-background: #FCF8F9;
-  --color-surface: #FFFFFF;
+  /* OFFICIAL COLOR TOKENS */
+  --brand-primary: #B76E79;   /* Dusty Rose - primary brand, active states, CTA accents */
+  --brand-secondary: #D8A7B1; /* Soft Rose - hover states, secondary accents, badges */
+  --brand-accent: #8A4F5D;    /* Deep Mauve - buttons, strong accents, icon highlights */
+  --bg-warm: #FCF8F9;         /* Warm Ivory - page/navbar background */
+  --bg-surface: #FFFFFF;      /* Pure White - cards, surfaces */
+  --text-heading: #2B1F23;    /* Rich Espresso - headings, dark text, hero frame border */
+  --text-body: #6B5A60;       /* Warm Taupe - body copy, subtext, muted labels */
+  --overlay-dark: rgba(43,31,35,0.55);
+  --overlay-mid: rgba(43,31,35,0.15);
   
-  /* Text Colors */
-  --color-heading: #2B1F23;
-  --color-body: #6B5A60;
+  /* Aliases to maintain backwards compatibility */
+  --color-primary: var(--brand-primary);
+  --color-secondary: var(--brand-secondary);
+  --color-accent: var(--brand-accent);
+  --color-background: var(--bg-warm);
+  --color-surface: var(--bg-surface);
+  --color-heading: var(--text-heading);
+  --color-body: var(--text-body);
   --color-muted: #A09297;
   --color-light: #FDFAFB;
 
@@ -121,6 +130,12 @@
     letter-spacing: 0.05em;
     font-weight: 600;
     text-transform: uppercase;
+  }
+
+  /* Hide Next.js Dev Indicator (Stray "N" badge) */
+  nextjs-portal,
+  [data-nextjs-dialog-overlay] {
+    display: none !important;
   }
 }
 

@@ -2,35 +2,22 @@ import { cn } from "@/lib/utils";
 
 /**
  * Veloura Living - Logo Component
- * Renders the brand logo via an inline SVG (or pulls from public assets later).
- * Currently sets up a semantic typography-based logo placeholder perfectly matching the brand identity.
+ * "VELOURA" in serif, "LIVING" in sans-serif below it.
  */
-export function Logo({ className, variant = "full" }) {
-  if (variant === "monogram") {
-    return (
-      <div
-        className={cn(
-          "flex items-center justify-center font-heading tracking-widest uppercase text-heading leading-none",
-          className
-        )}
-      >
-        <span className="text-2xl">V</span>
-      </div>
-    );
-  }
-
+export function Logo({ className }) {
   return (
-    <div
-      className={cn(
-        "flex flex-col items-center justify-center font-heading text-heading",
-        className
-      )}
-    >
-      <span className="text-3xl tracking-widest uppercase leading-none">
-        Veloura
+    <div className={cn("flex flex-col items-center justify-center select-none", className)}>
+      <span 
+        className="font-heading uppercase text-[22px] leading-none text-[var(--text-heading)]"
+        style={{ letterSpacing: '2px', fontFamily: '"Playfair Display", serif' }}
+      >
+        VELOURA
       </span>
-      <span className="text-[10px] tracking-[0.3em] uppercase text-muted mt-1 font-ui">
-        Living
+      <span 
+        className="font-body uppercase text-[10px] leading-none mt-[2px]"
+        style={{ letterSpacing: '3px', color: '#B76E79' }}
+      >
+        LIVING
       </span>
     </div>
   );

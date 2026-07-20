@@ -1,0 +1,376 @@
+/* ═══════════════════════════════════════════════════════════════
+   VELOURA LIVING HERO — Two-Panel Editorial Layout
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Section ──────────────────────────────────────────────── */
+.veloura-hero {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 80px; /* Standard section spacing below */
+  overflow: hidden;
+}
+
+/* ─── Frame ────────────────────────────────────────────────── */
+.veloura-hero__frame {
+  background: var(--text-heading);
+  padding: 8px; /* Mobile frame padding */
+  margin: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .veloura-hero__frame {
+    padding: 16px;
+  }
+}
+
+/* ─── Grid ─────────────────────────────────────────────────── */
+.veloura-hero__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .veloura-hero__grid {
+    flex-direction: row;
+    /* Full screen height below the 96px navbar margin */
+    height: calc(100vh - 128px); /* 100vh - 96px (main pt) - 32px (frame padding) */
+    min-height: 540px;
+  }
+}
+
+/* ─── Panel (shared) ───────────────────────────────────────── */
+.veloura-hero__panel {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.veloura-hero__panel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 4s ease-in-out, transform 12s ease-out;
+}
+
+.veloura-hero__panel-img--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.veloura-hero__panel-img--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.veloura-hero__panel:hover .veloura-hero__panel-img--active {
+  transform: scale(1.04);
+}
+
+.veloura-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.05) 30%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ── Left Panel ──────────────── */
+.veloura-hero__panel--left {
+  min-height: 460px;
+}
+
+@media (min-width: 768px) {
+  .veloura-hero__panel--left {
+    flex: 0 0 65%;
+    min-height: unset;
+  }
+}
+
+/* ── Right Panel ─────────────── */
+.veloura-hero__panel--right {
+  min-height: 380px;
+}
+
+@media (min-width: 768px) {
+  .veloura-hero__panel--right {
+    flex: 1;
+    min-height: unset;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LEFT PANEL — Content
+   ═══════════════════════════════════════════════════════════════ */
+.veloura-hero__left-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .veloura-hero__left-content {
+    padding: 32px 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .veloura-hero__left-content {
+    padding: 40px 48px;
+  }
+}
+
+/* ─── Logo ─────────────────────────────────────────────────── */
+.veloura-hero__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.veloura-hero__wordmark {
+  font-family: var(--font-body), 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* ─── Badge ────────────────────────────────────────────────── */
+.veloura-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: white;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+/* ─── Headline ─────────────────────────────────────────────── */
+.veloura-hero__headline {
+  font-family: var(--font-heading), 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--bg-warm);
+  margin-bottom: 28px;
+}
+
+/* ─── CTA Row ──────────────────────────────────────────────── */
+.veloura-hero__cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.veloura-hero__btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  background: var(--brand-accent);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  min-height: 48px;
+}
+
+.veloura-hero__btn-primary:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.veloura-hero__divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.veloura-hero__btn-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  min-height: 48px;
+  padding: 0;
+}
+
+.veloura-hero__btn-play:hover {
+  opacity: 0.75;
+}
+
+.veloura-hero__play-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.veloura-hero__play-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RIGHT PANEL — Content
+   ═══════════════════════════════════════════════════════════════ */
+.veloura-hero__right-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .veloura-hero__right-content {
+    padding: 24px;
+  }
+}
+
+/* ─── Story Header ─────────────────────────────────────────── */
+.veloura-hero__story-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.veloura-hero__story-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.veloura-hero__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.veloura-hero__story-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+.veloura-hero__story-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.veloura-hero__story-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.veloura-hero__story-icon:hover {
+  opacity: 0.7;
+}
+
+/* ─── Right Bottom Content ─────────────────────────────────── */
+.veloura-hero__right-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.veloura-hero__right-headline {
+  font-family: var(--font-heading), 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: white;
+}
+
+.veloura-hero__right-subtext {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--brand-secondary);
+  letter-spacing: 0.02em;
+}
+
+.veloura-hero__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.veloura-hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.veloura-hero__dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.veloura-hero__dot--active {
+  width: 20px;
+  background: white;
+  border-radius: 9999px;
+}
