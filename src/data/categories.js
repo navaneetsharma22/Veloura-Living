@@ -4,7 +4,7 @@ export const featuredCategories = [
     title: "Living Room",
     description: "Elegant seating crafted for modern comfort.",
     image: "/images/categories/living-room.png",
-    href: "/collections/living-room",
+    href: "/categories/living-room",
     size: "large", // spans 2 columns
   },
   {
@@ -12,7 +12,7 @@ export const featuredCategories = [
     title: "Bedroom",
     description: "Minimal premium bedroom with linen bedding.",
     image: "/images/categories/bedroom.png",
-    href: "/collections/bedroom",
+    href: "/categories/bedroom",
     size: "medium", // spans 1 column
   },
   {
@@ -20,7 +20,7 @@ export const featuredCategories = [
     title: "Dining",
     description: "Luxury oak dining tables and settings.",
     image: "/images/categories/dining.png",
-    href: "/collections/dining",
+    href: "/categories/dining",
     size: "medium",
   },
   {
@@ -28,7 +28,7 @@ export const featuredCategories = [
     title: "Office",
     description: "Elegant modern workspaces designed for focus.",
     image: "/images/categories/office.png",
-    href: "/collections/office",
+    href: "/categories/office",
     size: "medium",
   },
   {
@@ -36,7 +36,7 @@ export const featuredCategories = [
     title: "Outdoor",
     description: "Luxury patio furniture for timeless exteriors.",
     image: "/images/categories/outdoor.png",
-    href: "/collections/outdoor",
+    href: "/categories/outdoor",
     size: "large", // spans 2 columns
   },
   {
@@ -44,7 +44,7 @@ export const featuredCategories = [
     title: "Lighting",
     description: "Designer pendant lights to illuminate your home.",
     image: "/images/categories/lighting.png",
-    href: "/collections/lighting",
+    href: "/categories/lighting",
     size: "medium",
   },
   {
@@ -52,7 +52,7 @@ export const featuredCategories = [
     title: "Decor",
     description: "Premium accessories and curated sculptures.",
     image: "/images/categories/decor.png",
-    href: "/collections/decor",
+    href: "/categories/decor",
     size: "medium", // We will adjust the grid to fit 8 items elegantly.
     // Row 1: Large(2), Medium(1), Medium(1) = 4 cols
     // Row 2: Medium(1), Large(2), Medium(1) = 4 cols
@@ -69,7 +69,7 @@ export const featuredCategories = [
     title: "Storage",
     description: "Modern wooden storage furniture and shelving.",
     image: "/images/categories/storage.png",
-    href: "/collections/storage",
+    href: "/categories/storage",
     size: "large",
   },
   {
@@ -77,7 +77,7 @@ export const featuredCategories = [
     title: "Mirrors",
     description: "Elegant statement mirrors to elevate your space.",
     image: "/images/categories/mirrors-v2.png",
-    href: "/collections/mirrors",
+    href: "/categories/mirrors",
     size: "medium", // Fills the final 4th column of the 3rd row perfectly!
   },
 ];

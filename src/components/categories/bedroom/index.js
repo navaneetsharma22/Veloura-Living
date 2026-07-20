@@ -1,0 +1,9 @@
+export { BedroomHero } from "./BedroomHero";
+export { BedroomFurniture } from "./BedroomFurniture";
+export { BedroomGallery } from "./BedroomGallery";
+export { BedroomPhilosophy } from "./BedroomPhilosophy";
+export { BedroomMaterials } from "./BedroomMaterials";
+export { BedroomCollection } from "./BedroomCollection";
+export { BedroomStory } from "./BedroomStory";
+export { BedroomFAQ } from "./BedroomFAQ";
+export { BedroomCTA } from "./BedroomCTA";

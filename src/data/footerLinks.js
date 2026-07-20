@@ -2,12 +2,12 @@ export const footerLinks = {
   explore: {
     title: "Explore",
     links: [
-      { label: "Living Room", href: "/explore/living-room" },
-      { label: "Bedroom", href: "/explore/bedroom" },
-      { label: "Dining Room", href: "/explore/dining-room" },
-      { label: "Office", href: "/explore/office" },
-      { label: "Outdoor", href: "/explore/outdoor" },
-      { label: "Lighting", href: "/explore/lighting" },
+      { label: "Living Room", href: "/categories/living-room" },
+      { label: "Bedroom", href: "/categories/bedroom" },
+      { label: "Dining Room", href: "/categories/dining-room" },
+      { label: "Office", href: "/categories/office" },
+      { label: "Outdoor", href: "/categories/outdoor" },
+      { label: "Lighting", href: "/categories/lighting" },
     ]
   },
   collections: {
