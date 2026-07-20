@@ -18,6 +18,7 @@ const DROPDOWN_LINKS = {};
 const NAV_LINKS = [
   { label: "HOME", href: "/" },
   { label: "SHOP", href: "/shop" },
+  { label: "CATEGORIES", href: "/categories" },
   { label: "COLLECTIONS", href: "/collections" },
   { label: "JOURNAL", href: "/journal" },
   { label: "ABOUT", href: "/about" },

@@ -21,6 +21,7 @@ import { animations } from "@/lib/gsap";
 const PRIMARY_LINKS = [
   { label: "Home", href: "/" },
   { label: "Shop", href: "/shop", hasSubmenu: true },
+  { label: "Categories", href: "/categories" },
   { label: "Collections", href: "/collections", hasSubmenu: true },
   { label: "Journal", href: "/journal" },
   { label: "About", href: "/about" },
