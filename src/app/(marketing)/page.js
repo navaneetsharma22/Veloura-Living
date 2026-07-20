@@ -3,6 +3,7 @@ import { HeroLayout } from "@/components/hero";
 import { FeaturedCategories } from "@/components/home/categories";
 import { FeaturedCollections } from "@/components/home/collections";
 import { NewArrivals } from "@/components/home/new-arrivals";
+import { Craftsmanship } from "@/components/home/craftsmanship";
 
 export default function MarketingPage() {
   return (
@@ -11,6 +12,7 @@ export default function MarketingPage() {
       <FeaturedCategories />
       <FeaturedCollections />
       <NewArrivals />
+      <Craftsmanship />
     </PageTransition>
   );
 }

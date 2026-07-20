@@ -408,4 +408,9 @@
     @apply bg-heading text-surface shadow-level-1 rounded-sm px-2 py-1 uppercase tracking-wider text-xs;
     font-family: var(--font-ui);
   }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 }
