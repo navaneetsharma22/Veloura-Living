@@ -20,9 +20,10 @@ import { animations } from "@/lib/gsap";
 
 const PRIMARY_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Shop", href: "/shop" },
-  { label: "Collections", href: "/collections" },
-  { label: "Rooms", href: "/rooms" },
+  { label: "Shop", href: "/shop", hasSubmenu: true },
+  { label: "Collections", href: "/collections", hasSubmenu: true },
+  { label: "Rooms", href: "/rooms", hasSubmenu: true },
+  { label: "Inspiration", href: "/inspiration/living-room" },
   { label: "Journal", href: "/journal" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { label: "SHOP", href: "/shop", hasMegaMenu: true },
   { label: "COLLECTIONS", href: "/collections", hasMegaMenu: true },
   { label: "ROOMS", href: "/rooms", hasMegaMenu: true },
+  { label: "INSPIRATION", href: "/inspiration/living-room" },
   { label: "JOURNAL", href: "/journal" },
   { label: "ABOUT", href: "/about" },
   { label: "CONTACT", href: "/contact" },
