@@ -1,0 +1,9 @@
+export { OutdoorHero } from "./OutdoorHero";
+export { OutdoorFurniture } from "./OutdoorFurniture";
+export { OutdoorGallery } from "./OutdoorGallery";
+export { OutdoorPhilosophy } from "./OutdoorPhilosophy";
+export { OutdoorMaterials } from "./OutdoorMaterials";
+export { OutdoorCollection } from "./OutdoorCollection";
+export { OutdoorStory } from "./OutdoorStory";
+export { OutdoorFAQ } from "./OutdoorFAQ";
+export { OutdoorCTA } from "./OutdoorCTA";
