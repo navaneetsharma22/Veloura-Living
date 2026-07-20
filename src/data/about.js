@@ -18,7 +18,7 @@ export const ABOUT_DATA = {
       alt: "Minimalist living space",
     },
     image2: {
-      src: "https://images.unsplash.com/photo-1595514535312-32a74c76b978?q=80&w=2940&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2940&auto=format&fit=crop",
       alt: "Artisan woodworking detail",
     },
   },

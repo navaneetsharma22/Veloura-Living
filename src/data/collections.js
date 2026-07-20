@@ -29,7 +29,7 @@ export const featuredCollections = [
     description: "Soft beige interiors with natural light and organic textures.",
     image: "/images/collections/scandinavian.png",
     href: "/collections/scandinavian",
-    size: "vertical",
+    size: "medium",
   },
   {
     id: "05",
@@ -37,7 +37,7 @@ export const featuredCollections = [
     description: "Marble, velvet, brass accents, and sophisticated styling.",
     image: "/images/collections/luxury.png",
     href: "/collections/luxury",
-    size: "medium",
+    size: "vertical",
   },
   {
     id: "06",
@@ -45,6 +45,6 @@ export const featuredCollections = [
     description: "Dark modern interiors with architectural furniture pieces.",
     image: "/images/collections/contemporary.png",
     href: "/collections/contemporary",
-    size: "large",
+    size: "horizontal",
   },
 ];

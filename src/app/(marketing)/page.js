@@ -8,6 +8,7 @@ import { MaterialShowcase } from "@/components/home/material-showcase";
 import { InspirationGallery } from "@/components/home/inspiration-gallery";
 import { CustomerStories } from "@/components/home/customer-stories";
 import { JournalPreview } from "@/components/home/journal";
+import { FAQSection } from "@/components/home/FAQSection";
 import { Newsletter } from "@/components/home/newsletter";
 
 export default function MarketingPage() {
@@ -22,6 +23,7 @@ export default function MarketingPage() {
       <InspirationGallery />
       <CustomerStories />
       <JournalPreview />
+      <FAQSection />
       <Newsletter />
     </PageTransition>
   );

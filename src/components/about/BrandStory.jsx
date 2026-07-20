@@ -53,7 +53,7 @@ export function BrandStory({ data }) {
 
           <div className="lg:col-span-7 order-1 lg:order-2">
             <div className="relative w-full h-[60vh] md:h-[80vh] min-h-[500px]">
-              <div className="story-reveal absolute top-0 right-0 w-[85%] h-[85%] z-0 rounded-sm overflow-hidden">
+              <div className="story-reveal absolute top-0 right-0 w-[85%] h-[85%] z-10 shadow-2xl rounded-sm overflow-hidden">
                 <Image
                   src={data.image1.src}
                   alt={data.image1.alt}
@@ -62,7 +62,7 @@ export function BrandStory({ data }) {
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
               </div>
-              <div className="story-reveal absolute bottom-0 left-0 w-[55%] h-[60%] z-10 shadow-2xl rounded-sm overflow-hidden">
+              <div className="story-reveal absolute bottom-0 left-0 w-[55%] h-[60%] z-0 rounded-sm overflow-hidden">
                 <Image
                   src={data.image2.src}
                   alt={data.image2.alt}

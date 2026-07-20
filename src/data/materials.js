@@ -5,7 +5,7 @@ export const materials = [
     category: "Hardwood",
     origin: "Scandinavia",
     description: "Rich natural grain selected for exceptional durability and timeless elegance.",
-    image: "/images/materials/solid-oak.png",
+    image: "/images/materials/solid-oak-v2.png",
   },
   {
     id: "mat-02",
@@ -13,7 +13,7 @@ export const materials = [
     category: "Hardwood",
     origin: "North America",
     description: "Deep, warm tones that age beautifully, providing a sophisticated architectural foundation.",
-    image: "/images/materials/natural-walnut.png",
+    image: "/images/materials/natural-walnut-v2.png",
   },
   {
     id: "mat-03",
@@ -21,7 +21,7 @@ export const materials = [
     category: "Natural Stone",
     origin: "Italy",
     description: "Hand-selected slabs featuring unique veining patterns that make every piece one-of-a-kind.",
-    image: "/images/materials/italian-marble.png",
+    image: "/images/materials/italian-marble-v2.png",
   },
   {
     id: "mat-04",
@@ -29,7 +29,7 @@ export const materials = [
     category: "Textile",
     origin: "France",
     description: "Incredibly soft, highly textured upholstery that adds warmth and tactile luxury to seating.",
-    image: "/images/materials/boucle-fabric.png",
+    image: "/images/materials/boucle-fabric-v2.png",
   },
   {
     id: "mat-05",
@@ -37,7 +37,7 @@ export const materials = [
     category: "Leather",
     origin: "Italy",
     description: "Premium, uncorrected leather that develops a rich, personalized patina over generations of use.",
-    image: "/images/materials/full-grain-leather.png",
+    image: "/images/materials/full-grain-leather-v2.png",
   },
   {
     id: "mat-06",
@@ -45,6 +45,6 @@ export const materials = [
     category: "Metal",
     origin: "Japan",
     description: "A subtle, matte metallic finish that provides warm, elegant accents without being overly reflective.",
-    image: "/images/materials/brushed-brass.png",
+    image: "/images/materials/brushed-brass-v2.png",
   },
 ];
