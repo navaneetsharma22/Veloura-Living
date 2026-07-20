@@ -1,0 +1,9 @@
+export { OfficeHero } from "./OfficeHero";
+export { OfficeFurniture } from "./OfficeFurniture";
+export { OfficeGallery } from "./OfficeGallery";
+export { OfficePhilosophy } from "./OfficePhilosophy";
+export { OfficeMaterials } from "./OfficeMaterials";
+export { OfficeCollection } from "./OfficeCollection";
+export { OfficeStory } from "./OfficeStory";
+export { OfficeFAQ } from "./OfficeFAQ";
+export { OfficeCTA } from "./OfficeCTA";
