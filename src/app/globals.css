@@ -349,6 +349,10 @@
     @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
   }
 
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-heading focus:text-surface focus:px-4 focus:py-2 focus:rounded-md focus:font-ui font-medium shadow-modal;
+  }
+
   /* --- Hover Interaction Patterns --- */
   .hover-lift {
     @apply transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1 hover:shadow-level-2;

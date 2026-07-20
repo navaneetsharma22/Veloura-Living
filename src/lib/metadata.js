@@ -1,41 +1,51 @@
-// Default SEO metadata configuration
-const defaultTitle = "Veloura Living | Crafted for Timeless Living";
-const defaultDescription = "Veloura Living is a premium luxury furniture and home living brand. Explore our curated collections designed for timeless living.";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://velouraliving.com";
+import { siteConfig } from "@/config/site";
 
+/**
+ * Veloura Living - SEO Metadata Configurator
+ * Automatically inherits global defaults from siteConfig.
+ */
 export function constructMetadata({
-  title = defaultTitle,
-  description = defaultDescription,
-  image = "/images/og-image.jpg",
+  title,
+  description = siteConfig.description,
+  image = siteConfig.ogImage,
+  icons = "/favicon.ico",
   noIndex = false,
 } = {}) {
   return {
-    title,
+    title: {
+      default: siteConfig.name,
+      template: `%s | ${siteConfig.name}`,
+    },
+    ...(title && { title: `${title} | ${siteConfig.name}` }),
     description,
+    keywords: ["luxury furniture", "home decor", "veloura living", "interior design"],
+    authors: [{ name: siteConfig.name, url: siteConfig.url }],
+    creator: siteConfig.name,
     openGraph: {
-      title,
+      type: "website",
+      locale: siteConfig.defaultLocale,
+      url: siteConfig.url,
+      title: title || siteConfig.name,
       description,
-      url: siteUrl,
-      siteName: "Veloura Living",
+      siteName: siteConfig.name,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: title || siteConfig.name,
         },
       ],
-      locale: "en_US",
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: title || siteConfig.name,
       description,
       images: [image],
-      creator: "@velouraliving",
+      creator: siteConfig.links.twitter,
     },
-    metadataBase: new URL(siteUrl),
+    icons,
+    metadataBase: new URL(siteConfig.url),
     ...(noIndex && {
       robots: {
         index: false,

@@ -1,4 +1,6 @@
 import { Inter, Cormorant_Garamond, Geist } from "next/font/google";
+import { constructMetadata } from "@/lib/metadata";
+import { Providers } from "@/components/providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,19 +22,26 @@ const geist = Geist({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Veloura Living | Crafted for Timeless Living",
-  description: "Veloura Living is a premium luxury furniture and home living brand.",
-};
+export const metadata = constructMetadata();
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${geist.variable} antialiased h-full`}
+      className={`${inter.variable} ${cormorant.variable} ${geist.variable} antialiased h-full scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-body bg-background text-body">
-        {children}
+      <body className="min-h-full flex flex-col font-body bg-background text-body relative">
+        <a
+          href="#main-content"
+          className="skip-link"
+        >
+          Skip to main content
+        </a>
+        <Providers>
+          <main id="main-content" className="flex-grow flex flex-col w-full outline-none" tabIndex={-1}>
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   );
