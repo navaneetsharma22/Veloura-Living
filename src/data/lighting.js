@@ -3,47 +3,51 @@ export const LightingData = {
     eyebrow: "Lighting Collection",
     title: "Illuminate Your Sanctuary",
     description: "Discover carefully curated lighting fixtures that add warmth, personality, and balance to every interior. Elevate your space with designer pendants, sconces, and floor lamps crafted to last a lifetime.",
-    image: "/images/categories/lighting-v2.png" 
+    image: "/images/categories/lt-hero.png" 
   },
   LightingCategories: [
     {
       id: "cat-pendants",
       name: "Pendant Lights",
       description: "Sculptural forms crafted from ceramic and blown glass.",
-      image: "/images/gallery/gallery-1.png",
+      price: "Starting at $499",
+      image: "/images/categories/lt-pendant.png",
       href: "/categories/lighting/pendants"
     },
     {
       id: "cat-floor",
       name: "Floor Lamps",
       description: "Curated pieces that dictate the mood of your living space.",
-      image: "/images/gallery/gallery-5.png",
+      price: "Starting at $899",
+      image: "/images/categories/lt-floor.png",
       href: "/categories/lighting/floor-lamps"
     },
     {
       id: "cat-table",
       name: "Table Lamps",
       description: "Thoughtful objects that bring bookshelves and consoles to life.",
-      image: "/images/gallery/gallery-7.png",
+      price: "Starting at $399",
+      image: "/images/categories/lt-table.png",
       href: "/categories/lighting/table-lamps"
     },
     {
       id: "cat-sconces",
       name: "Wall Sconces",
       description: "Architectural objects carved from solid travertine and brass.",
-      image: "/images/gallery/gallery-3.png",
+      price: "Starting at $299",
+      image: "/images/categories/lt-sconce.png",
       href: "/categories/lighting/sconces"
     }
   ],
   inspirationGallery: [
-    { id: "insp-1", image: "/images/gallery/gallery-5.png", span: "col-span-12 md:col-span-8 row-span-2" },
-    { id: "insp-2", image: "/images/gallery/gallery-2.png", span: "col-span-12 md:col-span-4 row-span-1" },
-    { id: "insp-3", image: "/images/gallery/gallery-8.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-1", title: "Ambient Layers", price: "Starting at $1,299", image: "/images/categories/lt-insp-1.png", span: "col-span-12 md:col-span-8 row-span-2" },
+    { id: "insp-2", title: "Sculptural Glow", price: "Starting at $899", image: "/images/categories/lt-insp-2.png", span: "col-span-12 md:col-span-4 row-span-1" },
+    { id: "insp-3", title: "The Reading Nook", price: "Starting at $599", image: "/images/categories/lt-insp-3.png", span: "col-span-12 md:col-span-4 row-span-1" },
   ],
   designPhilosophy: {
     title: "The Art of Illumination",
     description: "A room is only half finished without the layers that give it soul. We believe lighting should never feel harsh. Instead, every pendant, sconce, and lamp should feel incredibly intentional—adding necessary texture, height, and quiet personality to the space.",
-    image: "/images/gallery/gallery-1.png"
+    image: "/images/categories/lt-hero.png"
   },
   materials: [
     {
@@ -68,7 +72,7 @@ export const LightingData = {
   featuredCollection: {
     eyebrow: "The Lumina Series",
     title: "Ambient Textures for the Modern Era.",
-    image: "/images/gallery/gallery-6.png",
+    image: "/images/categories/lt-pendant.png",
     href: "/collections/lumina"
   },
   customerStory: {
@@ -76,7 +80,7 @@ export const LightingData = {
     name: "James & Claire",
     interiorStyle: "Modern Minimalist",
     location: "Austin, TX",
-    image: "/images/gallery/gallery-4.png"
+    image: "/images/categories/lt-story.png"
   },
   faqs: [
     {
