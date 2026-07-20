@@ -65,6 +65,7 @@ function CarouselDots({ count = 5, active = 1, onDotClick }) {
 /* ─── Main Export ─────────────────────────────────────────────── */
 export function HeroLayout() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
   
   const rightPanelImages = [
     "/images/hero/right-panel-1.png",
@@ -74,12 +75,37 @@ export function HeroLayout() {
     "/images/hero/right-panel-5.png",
   ];
 
+  const slideCount = rightPanelImages.length;
+  // Clone the first image to the end to create a seamless infinite loop
+  const displayImages = [...rightPanelImages, rightPanelImages[0]];
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % rightPanelImages.length);
-    }, 15000); // 15 seconds per slide for an ambient pace
+      setCurrentSlide((prev) => {
+        if (prev === slideCount - 1) {
+          // We are about to slide to the cloned first image (index 5)
+          setTimeout(() => {
+            // Once the 3s slide animation finishes, instantly snap back to the REAL first image (index 0)
+            setIsTransitioning(false);
+            setCurrentSlide(0);
+            
+            // Re-enable smooth transitions shortly after the snap
+            setTimeout(() => {
+              setIsTransitioning(true);
+            }, 50);
+          }, 3000); 
+          return prev + 1;
+        }
+        return prev + 1;
+      });
+    }, 6000); // 6 seconds total: 3s sliding + 3s static
     return () => clearInterval(timer);
-  }, [rightPanelImages.length]);
+  }, [slideCount]);
+
+  const handleDotClick = (index) => {
+    setIsTransitioning(true);
+    setCurrentSlide(index);
+  };
   return (
     <section
       className="veloura-hero"
@@ -145,19 +171,26 @@ export function HeroLayout() {
 
           {/* ════════════════════ RIGHT PANEL ════════════════════ */}
           <div className="veloura-hero__panel veloura-hero__panel--right">
-            {rightPanelImages.map((src, index) => (
-              <Image
-                key={src}
-                src={src}
-                alt={`Luxury interior showcase ${index + 1}`}
-                fill
-                className={`veloura-hero__panel-img ${
-                  index === currentSlide ? "veloura-hero__panel-img--active" : "veloura-hero__panel-img--hidden"
-                }`}
-                sizes="(max-width: 768px) 100vw, 35vw"
-                priority={index === 0}
-              />
-            ))}
+            <div 
+              className="veloura-hero__slider-track"
+              style={{ 
+                transform: `translateX(-${currentSlide * 100}%)`,
+                transition: isTransitioning ? 'transform 3s ease-in-out' : 'none'
+              }}
+            >
+              {displayImages.map((src, index) => (
+                <div key={`${src}-${index}`} className="veloura-hero__slider-slide">
+                  <Image
+                    src={src}
+                    alt={`Luxury interior showcase ${index + 1}`}
+                    fill
+                    className="veloura-hero__panel-img"
+                    sizes="(max-width: 768px) 100vw, 35vw"
+                    priority={index <= 1}
+                  />
+                </div>
+              ))}
+            </div>
             <div className="veloura-hero__overlay" aria-hidden="true" />
 
             {/* Content Layer */}
@@ -192,7 +225,7 @@ export function HeroLayout() {
                 <p className="veloura-hero__right-subtext">
                   Like home, like never before
                 </p>
-                <CarouselDots count={rightPanelImages.length} active={currentSlide} onDotClick={setCurrentSlide} />
+                <CarouselDots count={slideCount} active={currentSlide % slideCount} onDotClick={handleDotClick} />
               </div>
             </div>
           </div>

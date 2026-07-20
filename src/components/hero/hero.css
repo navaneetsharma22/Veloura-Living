@@ -51,26 +51,28 @@
   flex-direction: column;
 }
 
-.veloura-hero__panel-img {
+.veloura-hero__slider-track {
   position: absolute;
   inset: 0;
+  display: flex;
   width: 100%;
   height: 100%;
+  transition: transform 3s ease-in-out;
+}
+
+.veloura-hero__slider-slide {
+  flex: 0 0 100%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.veloura-hero__panel-img {
   object-fit: cover;
-  transition: opacity 8s ease-in-out, transform 16s ease-out;
+  transition: transform 8s ease-out;
 }
 
-.veloura-hero__panel-img--hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.veloura-hero__panel-img--active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.veloura-hero__panel:hover .veloura-hero__panel-img--active {
+.veloura-hero__panel:hover .veloura-hero__panel-img {
   transform: scale(1.04);
 }
 
@@ -85,7 +87,7 @@
     rgba(0, 0, 0, 0.6) 100%
   );
   pointer-events: none;
-  z-index: 10;
+  z-index: 1;
 }
 
 /* ── Left Panel ──────────────── */
