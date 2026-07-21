@@ -19,13 +19,12 @@ export function ProductCarousel() {
         {/* 
           Infinite Marquee Scroll Container
         */}
-        <div className="flex gap-6 md:gap-8 px-4 w-max animate-marquee">
+        <div className="flex gap-6 md:gap-8 px-4 w-max animate-marquee hover:[animation-play-state:paused]">
           {marqueeProducts.map((product, index) => (
-            <div key={`${product.id}-${index}`} className="w-[280px] md:w-[320px] flex-shrink-0">
-              <ProductCard 
-                product={product} 
-              />
-            </div>
+            <ProductCard 
+              key={`${product.id}-${index}`}
+              product={product} 
+            />
           ))}
         </div>
       </div>
