@@ -13,15 +13,12 @@ export function Footer() {
 
       {/* Main Content Area */}
       <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8 xl:px-12 pt-20 lg:pt-32">
-        
         {/* Navigation & Brand */}
         <FooterColumns />
-
       </div>
 
       {/* Bottom Legal Bar */}
       <FooterBottom />
-      
     </footer>
   );
 }
