@@ -1,0 +1,9 @@
+export { MirrorsHero } from "./MirrorsHero";
+export { MirrorsCollections } from "./MirrorsCollections";
+export { MirrorsGallery } from "./MirrorsGallery";
+export { MirrorsPhilosophy } from "./MirrorsPhilosophy";
+export { MirrorsMaterials } from "./MirrorsMaterials";
+export { MirrorsCollection } from "./MirrorsCollection";
+export { MirrorsStory } from "./MirrorsStory";
+export { MirrorsFAQ } from "./MirrorsFAQ";
+export { MirrorsCTA } from "./MirrorsCTA";
