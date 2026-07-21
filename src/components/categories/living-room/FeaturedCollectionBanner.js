@@ -34,7 +34,7 @@ export function FeaturedCollectionBanner({ collection }) {
           href={collection.href}
           className="font-ui text-xs uppercase tracking-[0.1em] font-medium text-[var(--text-heading)] bg-white hover:bg-[var(--brand-secondary)] hover:text-white px-8 py-4 rounded-full transition-colors duration-300"
         >
-          Explore Collection
+          Explore Category
         </Link>
       </div>
 

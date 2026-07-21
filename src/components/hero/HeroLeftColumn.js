@@ -40,7 +40,7 @@ export function HeroLeftColumn() {
           rightIcon={<IconWrapper icon={ArrowRight} size="sm" />}
           className="bg-surface text-heading hover:bg-neutral-100 hover:text-primary transition-colors border-none"
         >
-          Explore Collection
+          Explore Category
         </Button>
         <Button 
           variant="outline" 

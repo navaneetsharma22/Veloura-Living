@@ -29,7 +29,7 @@ export function CategoryCard({ category }) {
         <p className="veloura-category-card__desc">{category.description}</p>
         
         <span className="veloura-category-card__cta">
-          Explore Collection 
+          Explore Category 
           <ArrowRight size={14} className="veloura-category-card__cta-icon" />
         </span>
       </div>

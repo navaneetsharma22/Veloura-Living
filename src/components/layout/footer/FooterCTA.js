@@ -33,10 +33,10 @@ export function FooterCTA() {
           Book a Consultation
         </Link>
         <Link 
-          href="/collections"
+          href="/categories"
           className="font-ui text-xs uppercase tracking-[0.1em] font-medium text-white border border-white/30 hover:bg-white/10 px-8 py-4 rounded-full transition-colors duration-300"
         >
-          Explore Collections
+          Explore Categories
         </Link>
       </div>
     </div>

@@ -74,7 +74,7 @@ export function CollectionCard({ collection }) {
         <p className="veloura-collection-card__desc">{collection.description}</p>
         
         <span className="veloura-collection-card__cta">
-          Explore Collection 
+          Explore Category 
           <ArrowRight size={14} className="veloura-collection-card__cta-icon" />
         </span>
       </div>

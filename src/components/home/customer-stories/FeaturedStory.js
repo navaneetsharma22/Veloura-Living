@@ -17,15 +17,14 @@ export function FeaturedStory({ story }) {
           alt={`Interior designed by ${story.name} featuring Veloura Living`}
           fill
           className="object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03]"
-          sizes="(max-width: 1024px) 100vw, 60vw"
-          priority
+          sizes="(max-width: 768px) 100vw, 60vw"
         />
         {/* Soft luxury gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(15,12,13,0.9)] via-[rgba(15,12,13,0.4)] to-[rgba(15,12,13,0.1)] opacity-80" />
       </div>
 
       {/* Customer Header */}
-      <div className="absolute top-8 left-8 right-8 z-10 flex justify-between items-start">
+      <div className="relative z-10 flex justify-between items-start p-6 lg:p-12 pb-0 w-full shrink-0">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full border border-white/20 bg-white/10 backdrop-blur-md flex items-center justify-center">
             <span className="font-heading text-xl text-white">{story.name.charAt(0)}</span>
@@ -46,7 +45,7 @@ export function FeaturedStory({ story }) {
       </div>
 
       {/* Editorial Story Content */}
-      <div className="relative z-10 flex flex-col justify-end h-full p-8 lg:p-12 text-white max-w-2xl">
+      <div className="relative z-10 flex flex-col justify-end flex-grow p-6 lg:p-12 text-white max-w-2xl mt-auto">
         <span className="inline-block font-body text-sm font-semibold uppercase tracking-[0.1em] text-[var(--brand-secondary)] mb-4">
           {story.collection}
         </span>

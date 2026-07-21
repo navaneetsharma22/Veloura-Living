@@ -1,13 +1,15 @@
+import dynamic from "next/dynamic";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { HeroLayout } from "@/components/hero";
-import { FeaturedCategories } from "@/components/home/categories";
-import { FeaturedCollections } from "@/components/home/collections";
-import { NewArrivals } from "@/components/home/new-arrivals";
-import { Craftsmanship } from "@/components/home/craftsmanship";
-import { MaterialShowcase } from "@/components/home/material-showcase";
-import { CustomerStories } from "@/components/home/customer-stories";
-import { FAQSection } from "@/components/home/FAQSection";
-import { Newsletter } from "@/components/home/newsletter";
+
+const FeaturedCategories = dynamic(() => import("@/components/home/categories").then(mod => mod.FeaturedCategories));
+const FeaturedCollections = dynamic(() => import("@/components/home/collections").then(mod => mod.FeaturedCollections));
+const NewArrivals = dynamic(() => import("@/components/home/new-arrivals").then(mod => mod.NewArrivals));
+const Craftsmanship = dynamic(() => import("@/components/home/craftsmanship").then(mod => mod.Craftsmanship));
+const MaterialShowcase = dynamic(() => import("@/components/home/material-showcase").then(mod => mod.MaterialShowcase));
+const CustomerStories = dynamic(() => import("@/components/home/customer-stories").then(mod => mod.CustomerStories));
+const FAQSection = dynamic(() => import("@/components/home/FAQSection").then(mod => mod.FAQSection));
+const Newsletter = dynamic(() => import("@/components/home/newsletter").then(mod => mod.Newsletter));
 
 export default function MarketingPage() {
   return (

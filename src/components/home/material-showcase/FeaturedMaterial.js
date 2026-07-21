@@ -17,8 +17,7 @@ export function FeaturedMaterial({ material }) {
           alt={`Premium ${material.name} texture`}
           fill
           className="object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
         {/* Soft luxury gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A1516] via-[rgba(26,21,22,0.6)] to-[rgba(26,21,22,0.2)] opacity-100" />

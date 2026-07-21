@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { usePreloader } from "@/contexts/PreloaderContext";
 
 import Image from "next/image";
 import { Play, ArrowUpRight, MoreHorizontal } from "lucide-react";
@@ -66,6 +67,20 @@ function CarouselDots({ count = 5, active = 1, onDotClick }) {
 export function HeroLayout() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const { setIsAssetsLoaded } = usePreloader();
+  const [loadedImages, setLoadedImages] = useState(0);
+
+  // We need 2 critical images to load: left panel and right panel (first slide)
+  useEffect(() => {
+    if (loadedImages >= 2) {
+      setIsAssetsLoaded(true);
+    }
+  }, [loadedImages, setIsAssetsLoaded]);
+
+  const handleImageLoad = useCallback(() => {
+    setLoadedImages((prev) => prev + 1);
+  }, []);
+
   
   const rightPanelImages = [
     "/images/categories/living-room.png",
@@ -127,6 +142,7 @@ export function HeroLayout() {
               className="veloura-hero__panel-img"
               sizes="(max-width: 768px) 100vw, 65vw"
               priority
+              onLoad={handleImageLoad}
             />
             <div className="veloura-hero__overlay" aria-hidden="true" />
 
@@ -154,8 +170,8 @@ export function HeroLayout() {
 
                 {/* CTA Row */}
                 <div className="veloura-hero__cta-row">
-                  <button className="veloura-hero__btn-primary" aria-label="View collection">
-                    <span>VIEW COLLECTION</span>
+                  <button className="veloura-hero__btn-primary" aria-label="View category">
+                    <span>VIEW CATEGORY</span>
                     <ArrowUpRight size={16} strokeWidth={2.5} />
                   </button>
 
@@ -189,7 +205,9 @@ export function HeroLayout() {
                     fill
                     className="veloura-hero__panel-img"
                     sizes="(max-width: 768px) 100vw, 35vw"
-                    priority={index <= 1}
+                    priority={index === 0}
+                    onLoad={index === 0 ? handleImageLoad : undefined}
+                    loading={index === 0 ? "eager" : "lazy"}
                   />
                 </div>
               ))}

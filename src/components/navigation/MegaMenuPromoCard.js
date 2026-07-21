@@ -29,7 +29,7 @@ export function MegaMenuPromoCard({ badge, title, description, href = "/collecti
         </p>
         
         <div className="mt-auto flex items-center text-body-sm font-medium uppercase tracking-widest text-primary">
-          Explore Collection
+          Explore Category
           <IconWrapper icon={ArrowRight} size="sm" className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
         </div>
       </div>

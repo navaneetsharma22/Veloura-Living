@@ -3,7 +3,6 @@
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/layout/SectionHeading";
 import { CollectionGrid } from "./CollectionGrid";
-import "./collections.css";
 
 export function FeaturedCollections() {
   return (

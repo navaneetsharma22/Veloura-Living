@@ -23,10 +23,10 @@ export function ContactCTA() {
             Book a Consultation
           </button>
           <Link 
-            href="/collections"
+            href="/categories"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-transparent text-heading border border-heading px-8 py-4 font-ui text-[10px] tracking-widest uppercase hover:bg-heading hover:text-white transition-colors"
           >
-            Explore Collections <ArrowRight size={14} />
+            Explore Categories <ArrowRight size={14} />
           </Link>
         </div>
       </Container>

@@ -3,6 +3,7 @@
 import { useStaggerReveal } from "@/lib/gsap/hooks";
 import { CollectionCard } from "./CollectionCard";
 import { featuredCollections } from "@/data/collections";
+import "./collections.css";
 
 export function CollectionGrid() {
   // Use the GSAP hook to stagger animate elements with the "reveal-collection" class

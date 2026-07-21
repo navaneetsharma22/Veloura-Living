@@ -10,19 +10,18 @@ export function ProductCarousel() {
     start: "top 80%", 
   });
 
-  // Duplicate the array to create a seamless infinite loop
-  const duplicatedProducts = [...newArrivals, ...newArrivals];
+  // Use the original products for a static scroll (no duplication needed)
+  const products = newArrivals;
 
   return (
     <div ref={carouselRef} className="w-full overflow-hidden reveal-carousel-container pb-12 pt-4">
       <div className="relative w-full flex">
         {/* 
-          Infinite Marquee Container
-          Uses a custom animation: animate-[marquee_40s_linear_infinite]
-          Pauses on hover so users can easily click the cards 
+          Static Horizontal Scroll Container
+          Uses custom scrollbar hiding class for clean UI
         */}
-        <div className="flex gap-6 md:gap-8 px-4 md:px-8 w-max animate-[marquee_50s_linear_infinite] hover:[animation-play-state:paused]">
-          {duplicatedProducts.map((product, index) => (
+        <div className="flex gap-6 md:gap-8 px-4 md:px-8 w-full overflow-x-auto hide-scrollbar pb-8">
+          {products.map((product, index) => (
             <ProductCard 
               key={`${product.id}-${index}`} 
               product={product} 

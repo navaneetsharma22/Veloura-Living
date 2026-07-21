@@ -17,8 +17,7 @@ export function FeaturedArticle({ article }) {
           alt={`Featured article: ${article.title}`}
           fill
           className="object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03]"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {/* Very soft darkening overlay on hover */}
         <div className="absolute inset-0 bg-black/0 transition-colors duration-700 group-hover:bg-black/5" />

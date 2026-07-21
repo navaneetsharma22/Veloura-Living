@@ -32,10 +32,10 @@ export function DecorCTA() {
             Book Consultation
           </Link>
           <Link 
-            href="/collections"
+            href="/categories"
             className="font-ui text-xs uppercase tracking-[0.1em] font-medium text-[var(--text-heading)] border border-[var(--color-border-soft)] bg-white hover:border-[var(--text-heading)] px-8 py-4 rounded-full transition-all duration-300"
           >
-            Explore Collections
+            Explore Categories
           </Link>
         </div>
       </div>

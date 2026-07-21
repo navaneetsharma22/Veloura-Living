@@ -11,7 +11,6 @@ export function CraftGallery() {
         fill
         className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
         sizes="(max-width: 1024px) 100vw, 50vw"
-        priority
       />
       
       {/* Subtle luxury gradient overlay to ensure the image feels deep and rich */}

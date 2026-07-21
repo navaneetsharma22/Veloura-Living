@@ -5,6 +5,8 @@ import { DesktopNavigation, MobileNavigation } from "@/components/layout";
 import { SearchOverlay } from "@/components/search/SearchOverlay";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { Footer } from "@/components/layout/footer";
+import { PreloaderProvider } from "@/contexts/PreloaderContext";
+import { GlobalPreloader } from "@/components/common";
 import "./globals.css";
 
 const inter = Inter({
@@ -41,16 +43,19 @@ export default function RootLayout({ children }) {
         >
           Skip to main content
         </a>
-        <Providers>
-          <SearchOverlay />
-          <CartDrawer />
-          <DesktopNavigation />
-          <MobileNavigation />
-          <main id="main-content" className="flex-grow flex flex-col w-full outline-none pt-20 md:pt-24" tabIndex={-1}>
-            {children}
-          </main>
-          <Footer />
-        </Providers>
+        <PreloaderProvider>
+          <GlobalPreloader />
+          <Providers>
+            <SearchOverlay />
+            <CartDrawer />
+            <DesktopNavigation />
+            <MobileNavigation />
+            <main id="main-content" className="flex-grow flex flex-col w-full outline-none pt-20 md:pt-24" tabIndex={-1}>
+              {children}
+            </main>
+            <Footer />
+          </Providers>
+        </PreloaderProvider>
       </body>
     </html>
   );
