@@ -10,22 +10,22 @@ export function ProductCarousel() {
     start: "top 80%", 
   });
 
-  // Use the original products for a static scroll (no duplication needed)
-  const products = newArrivals;
+  // Duplicate products to create a seamless infinite marquee effect
+  const marqueeProducts = [...newArrivals, ...newArrivals];
 
   return (
     <div ref={carouselRef} className="w-full overflow-hidden reveal-carousel-container pb-12 pt-4">
-      <div className="relative w-full flex">
+      <div className="relative w-full flex overflow-hidden">
         {/* 
-          Static Horizontal Scroll Container
-          Uses custom scrollbar hiding class for clean UI
+          Infinite Marquee Scroll Container
         */}
-        <div className="flex gap-6 md:gap-8 px-4 md:px-8 w-full overflow-x-auto hide-scrollbar pb-8">
-          {products.map((product, index) => (
-            <ProductCard 
-              key={`${product.id}-${index}`} 
-              product={product} 
-            />
+        <div className="flex gap-6 md:gap-8 px-4 w-max animate-marquee">
+          {marqueeProducts.map((product, index) => (
+            <div key={`${product.id}-${index}`} className="w-[280px] md:w-[320px] flex-shrink-0">
+              <ProductCard 
+                product={product} 
+              />
+            </div>
           ))}
         </div>
       </div>
