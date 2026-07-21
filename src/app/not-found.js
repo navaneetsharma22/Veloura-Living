@@ -13,7 +13,7 @@ export default function NotFound() {
         className="max-w-2xl w-full mx-auto border-none shadow-none bg-transparent"
       />
       <div className="mt-8">
-        <Button asChild variant="primary" size="lg">
+        <Button variant="primary" size="lg">
           <Link href="/">Return to Homepage</Link>
         </Button>
       </div>
