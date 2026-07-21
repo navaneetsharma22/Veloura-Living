@@ -17,7 +17,7 @@ export function FooterCTA() {
       {/* Decorative large circle gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--brand-secondary)]/10 rounded-full blur-3xl pointer-events-none" />
 
-      <h2 className="reveal-footer-cta font-heading text-4xl md:text-5xl lg:text-6xl font-medium mb-6 relative z-10">
+      <h2 className="reveal-footer-cta font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-white mb-6 relative z-10">
         Ready to Create Your Dream Space?
       </h2>
       

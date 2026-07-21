@@ -10,7 +10,7 @@ export const customerStories = [
     storyTitle: "Restoring Heritage with Modern Simplicity",
     quote: "Veloura's pieces provided the perfect balance. They are quiet enough to let the historic architecture breathe, yet striking enough to anchor the space.",
     fullStory: "When redesigning my 19th-century apartment in Milan, the challenge was finding furniture that wouldn't compete with the ornate frescoes and heavy moldings. I needed pieces that spoke quietly but with immense quality.\n\nThe solid oak dining table and minimalist bouclé seating from the Scandinavian collection provided the perfect balance. The craftsmanship is evident in every joint and seam. These aren't just pieces of furniture; they are beautifully engineered objects that make everyday living feel exceptional.",
-    image: "/images/gallery/gallery-1.png",
+    image: "/images/categories/st-hero.png",
   },
   {
     id: "story-02",

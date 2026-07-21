@@ -1,1 +1,0 @@
-export { InspirationGallery } from "./InspirationGallery";

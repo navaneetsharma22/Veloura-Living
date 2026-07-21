@@ -51,7 +51,7 @@ export function FeaturedStory({ story }) {
           {story.collection}
         </span>
         
-        <h3 className="font-heading text-4xl lg:text-5xl font-medium mb-6 leading-[1.15] transform transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:translate-x-2">
+        <h3 className="font-heading text-4xl lg:text-5xl font-medium mb-6 leading-[1.15] text-white transform transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:translate-x-2">
           {story.storyTitle}
         </h3>
         
