@@ -23,7 +23,7 @@ export function StoriesCTA() {
       </p>
       
       <Link 
-        href="/consultation"
+        href="/contact"
         className="inline-block font-ui text-xs uppercase tracking-[0.1em] font-medium text-[var(--bg-surface)] bg-[var(--text-heading)] hover:bg-[var(--brand-accent)] px-8 py-4 rounded-full transition-colors duration-300"
       >
         Book a Design Consultation

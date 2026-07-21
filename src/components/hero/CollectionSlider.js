@@ -160,14 +160,16 @@ export function CollectionSlider() {
                 <p className="text-body-sm text-surface/70 line-clamp-2 mb-6">
                   {collection.description}
                 </p>
-                <Button 
-                  variant="primary" 
-                  size="sm" 
-                  className="bg-surface text-heading hover:bg-neutral-100 border-none"
-                  tabIndex={currentIndex === index ? 0 : -1}
-                >
-                  {collection.ctaLabel}
-                </Button>
+                <Link href={collection.href} tabIndex={-1}>
+                  <Button 
+                    variant="primary" 
+                    size="sm" 
+                    className="bg-surface text-heading hover:bg-neutral-100 border-none"
+                    tabIndex={currentIndex === index ? 0 : -1}
+                  >
+                    {collection.ctaLabel}
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

@@ -27,7 +27,7 @@ export function FooterCTA() {
       
       <div className="reveal-footer-cta flex flex-col sm:flex-row gap-4 relative z-10">
         <Link 
-          href="/consultation"
+          href="/contact"
           className="font-ui text-xs uppercase tracking-[0.1em] font-medium text-[var(--text-heading)] bg-white hover:bg-[var(--brand-secondary)] hover:text-white px-8 py-4 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
           Book a Consultation

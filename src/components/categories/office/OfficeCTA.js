@@ -26,7 +26,7 @@ export function OfficeCTA() {
         
         <div className="reveal-office-cta flex flex-col sm:flex-row gap-4">
           <Link 
-            href="/consultation"
+            href="/contact"
             className="font-ui text-xs uppercase tracking-[0.1em] font-medium text-[var(--bg-surface)] bg-[var(--text-heading)] hover:bg-[var(--brand-secondary)] px-8 py-4 rounded-full transition-colors duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5"
           >
             Book Consultation

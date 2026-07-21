@@ -5,7 +5,7 @@ export const newArrivals = [
     collection: "Modern Collection",
     material: "Bouclé Fabric",
     description: "A soft, sculptural seating experience.",
-    image: "/images/materials/boucle-fabric.png",
+    image: "/images/categories/living-room.png",
     href: "/products/aster-lounge-chair",
   },
   {
@@ -14,7 +14,7 @@ export const newArrivals = [
     collection: "Luxury Collection",
     material: "Italian Marble",
     description: "Elegant geometry in premium natural stone.",
-    image: "/images/materials/italian-marble.png",
+    image: "/images/categories/dc-table.png",
     href: "/products/luna-coffee-table",
   },
   {
@@ -23,7 +23,7 @@ export const newArrivals = [
     collection: "Scandinavian Collection",
     material: "Solid Oak",
     description: "Minimalist craftsmanship for everyday dining.",
-    image: "/images/materials/solid-oak.png",
+    image: "/images/categories/dr-table.png",
     href: "/products/nord-dining-table",
   },
   {
@@ -32,7 +32,7 @@ export const newArrivals = [
     collection: "Contemporary Collection",
     material: "Walnut Wood",
     description: "Sophisticated storage with architectural lines.",
-    image: "/images/materials/natural-walnut.png",
+    image: "/images/categories/dr-sideboard.png",
     href: "/products/aria-sideboard",
   },
   {
@@ -41,7 +41,7 @@ export const newArrivals = [
     collection: "Minimal Collection",
     material: "Linen & Ash",
     description: "A serene centerpiece for restful spaces.",
-    image: "/images/gallery/gallery-2.png",
+    image: "/images/categories/bedroom.png",
     href: "/products/oasis-bed",
   },
   {
@@ -50,7 +50,7 @@ export const newArrivals = [
     collection: "Luxury Collection",
     material: "Brushed Brass",
     description: "Reflect light and expand your space with elegance.",
-    image: "/images/gallery/gallery-7.png",
+    image: "/images/categories/mr-floor.png",
     href: "/products/halo-mirror",
   },
   {
@@ -59,7 +59,7 @@ export const newArrivals = [
     collection: "Modern Collection",
     material: "Spun Aluminum",
     description: "Sculptural lighting that transforms the room.",
-    image: "/images/gallery/gallery-4.png",
+    image: "/images/categories/lt-pendant.png",
     href: "/products/aura-lamp",
   },
   {
@@ -68,7 +68,7 @@ export const newArrivals = [
     collection: "Contemporary Collection",
     material: "Smoked Oak",
     description: "Fluted details meet sophisticated storage.",
-    image: "/images/gallery/gallery-1.png",
+    image: "/images/categories/st-media.png",
     href: "/products/vesper-console",
   },
 ];

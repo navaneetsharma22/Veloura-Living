@@ -65,7 +65,7 @@ export function StorageHero({ content }) {
               Explore Storage Collection
             </a>
             <Link 
-              href="/consultation"
+              href="/contact"
               className="inline-flex items-center justify-center font-ui text-xs uppercase tracking-[0.1em] font-medium text-white border border-white/30 hover:bg-white/10 px-8 py-4 rounded-full transition-colors duration-300 backdrop-blur-sm"
             >
               Book Design Consultation

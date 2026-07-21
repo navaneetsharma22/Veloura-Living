@@ -68,11 +68,14 @@ export function HeroLayout() {
   const [isTransitioning, setIsTransitioning] = useState(true);
   
   const rightPanelImages = [
-    "/images/hero/right-panel-1.png",
-    "/images/hero/right-panel-2.png",
-    "/images/hero/right-panel-3.png",
-    "/images/hero/right-panel-4.png",
-    "/images/hero/right-panel-5.png",
+    "/images/categories/living-room.png",
+    "/images/categories/dr-hero.png",
+    "/images/categories/bedroom.png",
+    "/images/categories/of-hero.png",
+    "/images/categories/od-hero.png",
+    "/images/categories/lt-hero.png",
+    "/images/categories/st-hero.png",
+    "/images/categories/mr-floor.png",
   ];
 
   const slideCount = rightPanelImages.length;
@@ -132,7 +135,7 @@ export function HeroLayout() {
               {/* Logo Lockup */}
               <div className="veloura-hero__logo">
                 <LogoIcon />
-                <span className="veloura-hero__wordmark">LIVORA</span>
+                <span className="veloura-hero__wordmark">VELOURA</span>
               </div>
 
               {/* Badge + Headline + CTA pushed to bottom */}
