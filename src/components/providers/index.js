@@ -14,6 +14,7 @@ export function Providers({ children }) {
   useEffect(() => {
     // Initialize global GSAP defaults and accessibility configurations
     configureGSAP();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

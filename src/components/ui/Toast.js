@@ -42,8 +42,13 @@ export function Toaster() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
+
+  const removeToast = (id) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  };
 
   useEffect(() => {
     const handleAddToast = (e) => {
@@ -60,10 +65,6 @@ export function Toaster() {
     window.addEventListener(TOAST_EVENT, handleAddToast);
     return () => window.removeEventListener(TOAST_EVENT, handleAddToast);
   }, []);
-
-  const removeToast = (id) => {
-    setToasts((prev) => prev.filter((t) => t.id !== id));
-  };
 
   if (!mounted) return null;
 

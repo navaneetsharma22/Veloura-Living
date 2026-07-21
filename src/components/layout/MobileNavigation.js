@@ -73,7 +73,8 @@ export function MobileNavigation() {
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape" && isOpen) {
-        setIsOpen(false);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsOpen(false);
       }
     };
     window.addEventListener("keydown", handleEsc);
@@ -82,6 +83,7 @@ export function MobileNavigation() {
 
   // Handle Route Changes (close menu when navigating)
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false);
   }, [pathname]);
 

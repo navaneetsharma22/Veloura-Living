@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { MegaMenuPromoCard } from "./MegaMenuPromoCard";
 import { MegaMenuProductCard } from "./MegaMenuProductCard";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { cn } from "@/lib/utils";
 
 /**
@@ -62,15 +63,11 @@ export function MegaMenu({ activeMenu, onClose }) {
   const containerRef = useRef(null);
   const data = activeMenu ? MOCK_DATA[activeMenu] : null;
 
-  useEffect(() => {
+  useGSAP(() => {
     const el = containerRef.current;
     if (!el) return;
 
     if (activeMenu && data) {
-      // Kill any in-progress animations on this element
-      gsap.killTweensOf(el);
-      gsap.killTweensOf(el.querySelectorAll(".mega-menu-stagger"));
-
       // Animate in
       gsap.fromTo(
         el,
@@ -86,7 +83,7 @@ export function MegaMenu({ activeMenu, onClose }) {
       // Animate out
       gsap.to(el, { autoAlpha: 0, y: -10, duration: 0.25, ease: "power2.in" });
     }
-  }, [activeMenu, data]);
+  }, { dependencies: [activeMenu, data], scope: containerRef });
 
   return (
     <div

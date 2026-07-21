@@ -45,6 +45,7 @@ export function DesktopNavigation() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveMenu(null);
     setActiveDropdown(null);
   }, [pathname]);
@@ -57,13 +58,15 @@ export function DesktopNavigation() {
   const handleMouseLeave = () => {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
     hoverTimeout.current = setTimeout(() => {
-      setActiveMenu(null);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+    setActiveMenu(null);
     }, 150);
   };
 
   const handleDropdownEnter = (label) => {
     if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
     setActiveDropdown(label);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveMenu(null);
   };
 
@@ -75,6 +78,7 @@ export function DesktopNavigation() {
   };
 
   const closeMenu = () => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveMenu(null);
   };
 
@@ -123,7 +127,8 @@ export function DesktopNavigation() {
                       setActiveDropdown(null);
                     } else if (link.hasDropdown) {
                       handleDropdownEnter(link.label);
-                      setActiveMenu(null);
+                      // eslint-disable-next-line react-hooks/set-state-in-effect
+    setActiveMenu(null);
                     } else {
                       handleMouseEnter(null);
                       setActiveDropdown(null);

@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useMemo } from "react";
 
 const PreloaderContext = createContext();
 
@@ -20,13 +20,15 @@ export function PreloaderProvider({ children }) {
     return () => clearTimeout(fallbackTimer);
   }, [isAssetsLoaded]);
 
+  const contextValue = useMemo(() => ({
+    isAssetsLoaded, 
+    setIsAssetsLoaded, 
+    isPreloaderActive, 
+    setIsPreloaderActive 
+  }), [isAssetsLoaded, isPreloaderActive]);
+
   return (
-    <PreloaderContext.Provider value={{ 
-      isAssetsLoaded, 
-      setIsAssetsLoaded, 
-      isPreloaderActive, 
-      setIsPreloaderActive 
-    }}>
+    <PreloaderContext.Provider value={contextValue}>
       {/* 
         We use a strict data-attribute on body to prevent scrolling 
         while the preloader is active, avoiding React hydration issues with manipulating body classes directly.

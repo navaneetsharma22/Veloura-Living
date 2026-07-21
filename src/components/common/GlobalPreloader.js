@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { usePreloader } from "@/contexts/PreloaderContext";
 import { cn } from "@/lib/utils";
 
@@ -68,7 +69,7 @@ export function GlobalPreloader() {
   }, [isPreloaderActive]);
 
   // Entrance animation
-  useEffect(() => {
+  useGSAP(() => {
     const tl = gsap.timeline();
     
     // Initial state
@@ -106,10 +107,10 @@ export function GlobalPreloader() {
       delay: 1.5
     });
     
-  }, []);
+  }, { scope: containerRef });
 
   // Exit animation once ready
-  useEffect(() => {
+  useGSAP(() => {
     if (isAssetsLoaded && minTimeElapsed && isPreloaderActive) {
       const tl = gsap.timeline({
         onComplete: () => {
@@ -138,7 +139,7 @@ export function GlobalPreloader() {
         ease: "power2.inOut"
       }, "-=0.5");
     }
-  }, [isAssetsLoaded, minTimeElapsed, isPreloaderActive, setIsPreloaderActive]);
+  }, { dependencies: [isAssetsLoaded, minTimeElapsed, isPreloaderActive, setIsPreloaderActive], scope: containerRef });
 
   if (!isPreloaderActive) return null;
 
