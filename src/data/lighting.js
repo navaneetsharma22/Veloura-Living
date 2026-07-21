@@ -58,14 +58,14 @@ export const LightingData = {
     },
     {
       id: "mat-2",
-      name: "Hand-Blown Glass",
-      description: "Subtly imperfect and incredibly elegant, catching natural light to add a sense of weightlessness to heavy timber surfaces.",
-      image: "/images/materials/solid-oak-v2.png" 
+      name: "Natural Walnut",
+      description: "A rich, organic timber that adds warmth and architectural structure to table lamps and floor bases.",
+      image: "/images/materials/natural-walnut-v2.png" 
     },
     {
       id: "mat-3",
-      name: "Matte Ceramic",
-      description: "Raw, unglazed, and highly tactile, providing the perfect matte contrast against reflective mirrors and polished brass.",
+      name: "Italian Marble",
+      description: "Providing a heavy, luxurious anchor for floor and table lamps, each piece features unique, expressive veining.",
       image: "/images/materials/italian-marble-v2.png" 
     }
   ],
